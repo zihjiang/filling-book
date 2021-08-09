@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [什么是Filling](index.md)
+* [产品对比](Compared.md)
 * [快速入门](快速入门/README.md)
     * [基本概念](基本概念/README.md)
         * [任务](基本概念/job.md)
