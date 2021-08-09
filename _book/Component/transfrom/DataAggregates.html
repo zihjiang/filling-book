@@ -1,0 +1,714 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>DataAggregates · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="DataJoin.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    什么是Filling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../快速入门/">
+            
+                <a href="../../快速入门/">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../基本概念/">
+            
+                <a href="../../基本概念/">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../基本概念/job.html">
+            
+                <a href="../../基本概念/job.html">
+            
+                    
+                    任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../基本概念/datatype.html">
+            
+                <a href="../../基本概念/datatype.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../基本概念/Component.html">
+            
+                <a href="../../基本概念/Component.html">
+            
+                    
+                    组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../source/">
+            
+                <a href="../source/">
+            
+                    
+                    source
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../source/kafkaSource.html">
+            
+                <a href="../source/kafkaSource.html">
+            
+                    
+                    kafka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../source/dataGenSource.html">
+            
+                <a href="../source/dataGenSource.html">
+            
+                    
+                    dataGen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../source/jdbcSource.html">
+            
+                <a href="../source/jdbcSource.html">
+            
+                    
+                    jdbc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../source/fileSource.html">
+            
+                <a href="../source/fileSource.html">
+            
+                    
+                    file
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    transfrom
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.2.1" data-path="DataAggregates.html">
+            
+                <a href="DataAggregates.html">
+            
+                    
+                    DataAggregates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="DataJoin.html">
+            
+                <a href="DataJoin.html">
+            
+                    
+                    DataJoin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="DataSelector.html">
+            
+                <a href="DataSelector.html">
+            
+                    
+                    DataSelector
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="DecodeBase64.html">
+            
+                <a href="DecodeBase64.html">
+            
+                    
+                    DecodeBase64
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="EncodeBase64.html">
+            
+                <a href="EncodeBase64.html">
+            
+                    
+                    EncodeBase64
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="FieldJavaScript.html">
+            
+                <a href="FieldJavaScript.html">
+            
+                    
+                    FieldJavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="FieldOperation.html">
+            
+                <a href="FieldOperation.html">
+            
+                    
+                    FieldOperation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8" data-path="FieldOrder.html">
+            
+                <a href="FieldOrder.html">
+            
+                    
+                    FieldOrder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.9" data-path="FieldRemove.html">
+            
+                <a href="FieldRemove.html">
+            
+                    
+                    FieldRemove
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.10" data-path="FieldRename.html">
+            
+                <a href="FieldRename.html">
+            
+                    
+                    FieldRename
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.11" data-path="FieldSelect.html">
+            
+                <a href="FieldSelect.html">
+            
+                    
+                    FieldSelect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.12" data-path="FieldSplit.html">
+            
+                <a href="FieldSplit.html">
+            
+                    
+                    FieldSplit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.13" data-path="FieldTypeConver.html">
+            
+                <a href="FieldTypeConver.html">
+            
+                    
+                    FieldTypeConver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.14" data-path="Sql.html">
+            
+                <a href="Sql.html">
+            
+                    
+                    Sql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    sink
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../sink/jdbcSink.html">
+            
+                <a href="../sink/jdbcSink.html">
+            
+                    
+                    Jdbc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../sink/ConsoleSink.html">
+            
+                <a href="../sink/ConsoleSink.html">
+            
+                    
+                    Console
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../sink/ConsoleSink.html">
+            
+                <a href="../sink/ConsoleSink.html">
+            
+                    
+                    Console
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../sink/Elasticsearch.html">
+            
+                <a href="../sink/Elasticsearch.html">
+            
+                    
+                    Elasticsearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5" data-path="../sink/FileSink.html">
+            
+                <a href="../sink/FileSink.html">
+            
+                    
+                    FileSink
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >DataAggregates</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="dataaggregates">DataAggregates</h1>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: transfrom">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="DataJoin.html" class="navigation navigation-next " aria-label="Next page: DataJoin">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"DataAggregates","level":"1.4.2.1","depth":3,"next":{"title":"DataJoin","level":"1.4.2.2","depth":3,"path":"Component/transfrom/DataJoin.md","ref":"Component/transfrom/DataJoin.md","articles":[]},"previous":{"title":"transfrom","level":"1.4.2","depth":2,"path":"Component/transfrom/README.md","ref":"Component/transfrom/README.md","articles":[{"title":"DataAggregates","level":"1.4.2.1","depth":3,"path":"Component/transfrom/DataAggregates.md","ref":"Component/transfrom/DataAggregates.md","articles":[]},{"title":"DataJoin","level":"1.4.2.2","depth":3,"path":"Component/transfrom/DataJoin.md","ref":"Component/transfrom/DataJoin.md","articles":[]},{"title":"DataSelector","level":"1.4.2.3","depth":3,"path":"Component/transfrom/DataSelector.md","ref":"Component/transfrom/DataSelector.md","articles":[]},{"title":"DecodeBase64","level":"1.4.2.4","depth":3,"path":"Component/transfrom/DecodeBase64.md","ref":"Component/transfrom/DecodeBase64.md","articles":[]},{"title":"EncodeBase64","level":"1.4.2.5","depth":3,"path":"Component/transfrom/EncodeBase64.md","ref":"Component/transfrom/EncodeBase64.md","articles":[]},{"title":"FieldJavaScript","level":"1.4.2.6","depth":3,"path":"Component/transfrom/FieldJavaScript.md","ref":"Component/transfrom/FieldJavaScript.md","articles":[]},{"title":"FieldOperation","level":"1.4.2.7","depth":3,"path":"Component/transfrom/FieldOperation.md","ref":"Component/transfrom/FieldOperation.md","articles":[]},{"title":"FieldOrder","level":"1.4.2.8","depth":3,"path":"Component/transfrom/FieldOrder.md","ref":"Component/transfrom/FieldOrder.md","articles":[]},{"title":"FieldRemove","level":"1.4.2.9","depth":3,"path":"Component/transfrom/FieldRemove.md","ref":"Component/transfrom/FieldRemove.md","articles":[]},{"title":"FieldRename","level":"1.4.2.10","depth":3,"path":"Component/transfrom/FieldRename.md","ref":"Component/transfrom/FieldRename.md","articles":[]},{"title":"FieldSelect","level":"1.4.2.11","depth":3,"path":"Component/transfrom/FieldSelect.md","ref":"Component/transfrom/FieldSelect.md","articles":[]},{"title":"FieldSplit","level":"1.4.2.12","depth":3,"path":"Component/transfrom/FieldSplit.md","ref":"Component/transfrom/FieldSplit.md","articles":[]},{"title":"FieldTypeConver","level":"1.4.2.13","depth":3,"path":"Component/transfrom/FieldTypeConver.md","ref":"Component/transfrom/FieldTypeConver.md","articles":[]},{"title":"Sql","level":"1.4.2.14","depth":3,"path":"Component/transfrom/Sql.md","ref":"Component/transfrom/Sql.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","livereload"],"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Component/transfrom/DataAggregates.md","mtime":"2021-08-08T12:18:50.806Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-08T15:05:06.422Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

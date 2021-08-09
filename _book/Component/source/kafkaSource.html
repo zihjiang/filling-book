@@ -1,0 +1,820 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>kafka · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="dataGenSource.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    什么是Filling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../快速入门/">
+            
+                <a href="../../快速入门/">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../基本概念/">
+            
+                <a href="../../基本概念/">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../基本概念/job.html">
+            
+                <a href="../../基本概念/job.html">
+            
+                    
+                    任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../基本概念/datatype.html">
+            
+                <a href="../../基本概念/datatype.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../基本概念/Component.html">
+            
+                <a href="../../基本概念/Component.html">
+            
+                    
+                    组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    source
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1.1" data-path="kafkaSource.html">
+            
+                <a href="kafkaSource.html">
+            
+                    
+                    kafka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="dataGenSource.html">
+            
+                <a href="dataGenSource.html">
+            
+                    
+                    dataGen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="jdbcSource.html">
+            
+                <a href="jdbcSource.html">
+            
+                    
+                    jdbc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="fileSource.html">
+            
+                <a href="fileSource.html">
+            
+                    
+                    file
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../transfrom/">
+            
+                <a href="../transfrom/">
+            
+                    
+                    transfrom
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../transfrom/DataAggregates.html">
+            
+                <a href="../transfrom/DataAggregates.html">
+            
+                    
+                    DataAggregates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../transfrom/DataJoin.html">
+            
+                <a href="../transfrom/DataJoin.html">
+            
+                    
+                    DataJoin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../transfrom/DataSelector.html">
+            
+                <a href="../transfrom/DataSelector.html">
+            
+                    
+                    DataSelector
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../transfrom/DecodeBase64.html">
+            
+                <a href="../transfrom/DecodeBase64.html">
+            
+                    
+                    DecodeBase64
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../transfrom/EncodeBase64.html">
+            
+                <a href="../transfrom/EncodeBase64.html">
+            
+                    
+                    EncodeBase64
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../transfrom/FieldJavaScript.html">
+            
+                <a href="../transfrom/FieldJavaScript.html">
+            
+                    
+                    FieldJavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="../transfrom/FieldOperation.html">
+            
+                <a href="../transfrom/FieldOperation.html">
+            
+                    
+                    FieldOperation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8" data-path="../transfrom/FieldOrder.html">
+            
+                <a href="../transfrom/FieldOrder.html">
+            
+                    
+                    FieldOrder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.9" data-path="../transfrom/FieldRemove.html">
+            
+                <a href="../transfrom/FieldRemove.html">
+            
+                    
+                    FieldRemove
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.10" data-path="../transfrom/FieldRename.html">
+            
+                <a href="../transfrom/FieldRename.html">
+            
+                    
+                    FieldRename
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.11" data-path="../transfrom/FieldSelect.html">
+            
+                <a href="../transfrom/FieldSelect.html">
+            
+                    
+                    FieldSelect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.12" data-path="../transfrom/FieldSplit.html">
+            
+                <a href="../transfrom/FieldSplit.html">
+            
+                    
+                    FieldSplit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.13" data-path="../transfrom/FieldTypeConver.html">
+            
+                <a href="../transfrom/FieldTypeConver.html">
+            
+                    
+                    FieldTypeConver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.14" data-path="../transfrom/Sql.html">
+            
+                <a href="../transfrom/Sql.html">
+            
+                    
+                    Sql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    sink
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../sink/jdbcSink.html">
+            
+                <a href="../sink/jdbcSink.html">
+            
+                    
+                    Jdbc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../sink/ConsoleSink.html">
+            
+                <a href="../sink/ConsoleSink.html">
+            
+                    
+                    Console
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../sink/ConsoleSink.html">
+            
+                <a href="../sink/ConsoleSink.html">
+            
+                    
+                    Console
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../sink/Elasticsearch.html">
+            
+                <a href="../sink/Elasticsearch.html">
+            
+                    
+                    Elasticsearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5" data-path="../sink/FileSink.html">
+            
+                <a href="../sink/FileSink.html">
+            
+                    
+                    FileSink
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >kafka</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="kafka&#x6570;&#x636E;&#x6E90;">Kafka&#x6570;&#x636E;&#x6E90;</h1>
+<p>Kafka&#x6570;&#x636E;&#x6E90;&#xFF08;<code>KafkaSource</code>&#xFF09;&#x4ECE;&#x6307;&#x5B9A;Kafka&#x96C6;&#x7FA4;&#x7684;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6307;&#x5B9A;&#x4E3B;&#x9898;&#x4E2D;&#x6D88;&#x8D39;&#x6570;&#x636E;&#x3002;</p>
+<hr>
+<h3 id="options"><a href="">Options</a></h3>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>required</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="">topics</a></td>
+<td>array/string</td>
+<td>yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="">group.id</a></td>
+<td>string</td>
+<td>no</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="">bootstrap.servers</a></td>
+<td>string</td>
+<td>yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="">schema</a></td>
+<td>string</td>
+<td>yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="">format.type</a></td>
+<td>string</td>
+<td>yes</td>
+<td>json</td>
+</tr>
+<tr>
+<td><a href="">format.field_delimiter</a></td>
+<td>String</td>
+<td>no</td>
+<td>,</td>
+</tr>
+<tr>
+<td><a href="">consumer.*</a></td>
+<td>string</td>
+<td>no</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="">offset.reset</a></td>
+<td>string</td>
+<td>no</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="">common-options</a></td>
+<td>string</td>
+<td>no</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h2>
+<h5 id="&#x4E3B;&#x9898;-topics-arraystring">&#x4E3B;&#x9898; topics (array[string])</h5>
+<p>topic&#x540D;&#x79F0;&#x3002;</p>
+<h5 id="&#x8BA2;&#x9605;&#x7EC4;-groupid-string-optinal">&#x8BA2;&#x9605;&#x7EC4; group_id (string) (optinal)</h5>
+<p>&#x8BA2;&#x9605;&#x7EC4;id&#x3002;&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#xFF0C;&#x6BCF;&#x6B21;&#x8FD0;&#x884C;&#x65F6;&#x90FD;&#x4F1A;&#x6839;&#x636E;&#x7EC4;&#x4EF6;id&#x81EA;&#x52A8;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x3002;&#x5982;&#x679C;&#x7EC4;&#x4EF6;id&#x6CA1;&#x6709;&#x663E;&#x793A;&#x6307;&#x5B9A;&#x800C;&#x662F;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x8BDD;&#xFF0C;&#x5219;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x6BCF;&#x6B21;&#x6267;&#x884C;&#x65F6;&#x90FD;&#x4F1A;&#x5206;&#x914D;&#x5230;&#x76F8;&#x540C;&#x7684;&#x8BA2;&#x9605;&#x7EC4;&#xFF0C;&#x56E0;&#x6B64;&#x5EFA;&#x8BAE;&#x6307;&#x5B9A;&#x3002;</p>
+<h5 id="&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;-consumerbootstrapservers-string">&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740; consumer.bootstrap.servers (string)</h5>
+<p>Kafka&#x96C6;&#x7FA4;&#x5730;&#x5740;&#xFF0C;&#x591A;&#x4E2A;&#x5730;&#x5740;&#x7528;<code>,</code>&#x9694;&#x5F00;&#x3002;</p>
+<h5 id="&#x6837;&#x4F8B;&#x6570;&#x636E;-schema-string">&#x6837;&#x4F8B;&#x6570;&#x636E; schema (String)</h5>
+<p>&#x7528;&#x4E8E;&#x751F;&#x6210;source&#x8868;&#x7684;schema, &#x5982;&#x679C;&#x6570;&#x636E;&#x548C;schema&#x5B57;&#x6BB5;&#x4E0D;&#x4E00;&#x81F4;, &#x5219;&#x4F1A;&#x51FA;&#x73B0;&#x5B57;&#x6BB5;&#x4E3A;&#x7A7A;&#x7684;&#x95EE;&#x9898;</p>
+<h5 id="&#x6570;&#x636E;&#x683C;&#x5F0F;-formattype-string">&#x6570;&#x636E;&#x683C;&#x5F0F; format.type (string)</h5>
+<p>&#x8F93;&#x5165;&#x683C;&#x5F0F;&#xFF0C;&#x652F;&#x6301;Json,csv&#x548C;&#x4E0E;text&#x683C;&#x5F0F;</p>
+<h5 id="&#x6570;&#x636E;&#x5206;&#x9694;&#x7B26;-formatfielddelimiter-optinal">&#x6570;&#x636E;&#x5206;&#x9694;&#x7B26;, format.field_delimiter (optinal)</h5>
+<p>&#x4EC5;&#x5728;format.type&#x4E3A;csv&#x65F6;&#x751F;&#x6548;, &#x6307;&#x5B9A;&#x5206;&#x9694;&#x7B26;, &#x4E14;&#x53EA;&#x80FD;&#x662F;&#x4E00;&#x4E2A;char&#x5B57;&#x7B26;</p>
+<h5 id="&#x6D88;&#x8D39;&#x6A21;&#x5F0F;-offsetreset">&#x6D88;&#x8D39;&#x6A21;&#x5F0F; offset.reset</h5>
+<p>  &#x4EE5;&#x4F55;&#x79CD;&#x65B9;&#x5F0F;&#x6D88;&#x8D39;kafka&#x6570;&#x636E;, &#x5206;&#x522B;&#x662F;:</p>
+<pre><code>earliest: &#x5C3D;&#x53EF;&#x80FD;&#x4ECE;&#x6700;&#x65E9;&#x6D88;&#x8D39;&#x6570;&#x636E;
+
+latest: &#x4ECE;&#x6700;&#x65B0;&#x5904;&#x6D88;&#x8D39;&#x6570;&#x636E;
+</code></pre><h5 id="&#x5176;&#x4ED6;&#x914D;&#x7F6E;-consumer-optinal">&#x5176;&#x4ED6;&#x914D;&#x7F6E; consumer.* (optinal)</h5>
+<p>&#x9664;&#x4E86;&#x4EE5;&#x4E0A;&#x5FC5;&#x5907;&#x7684;kafka consumer&#x5BA2;&#x6237;&#x7AEF;&#x5FC5;&#x987B;&#x6307;&#x5B9A;&#x7684;&#x53C2;&#x6570;&#x5916;&#xFF0C;&#x7528;&#x6237;&#x8FD8;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x591A;&#x4E2A;consumer&#x5BA2;&#x6237;&#x7AEF;&#x975E;&#x5FC5;&#x987B;&#x53C2;&#x6570;&#xFF0C;&#x8986;&#x76D6;&#x4E86;<a href="http://kafka.apache.org/documentation.html#oldconsumerconfigs" target="_blank">kafka&#x5B98;&#x65B9;&#x6587;&#x6863;&#x6307;&#x5B9A;&#x7684;&#x6240;&#x6709;consumer&#x53C2;&#x6570;</a>.</p>
+<hr>
+<h2 id="&#x914D;&#x7F6E;&#x793A;&#x4F8B;">&#x914D;&#x7F6E;&#x793A;&#x4F8B;</h2>
+<pre><code class="lang-yaml">    {
+<span class="hljs-attr">      &quot;plugin_name&quot;:</span> <span class="hljs-string">&quot;KafkaTableStream&quot;</span>,
+      <span class="hljs-string">&quot;consumer.group.id&quot;</span>: <span class="hljs-string">&quot;waterdrop15&quot;</span>,
+<span class="hljs-attr">      &quot;topics&quot;:</span> <span class="hljs-string">&quot;batchSend&quot;</span>,
+<span class="hljs-attr">      &quot;result_table_name&quot;:</span> <span class="hljs-string">&quot;KafkaTableStreamTable&quot;</span>,
+      <span class="hljs-string">&quot;format.type&quot;</span>: <span class="hljs-string">&quot;json&quot;</span>,
+<span class="hljs-attr">      &quot;schema&quot;:</span> <span class="hljs-string">&quot;{\&quot;host\&quot;:\&quot;192.168.1.103\&quot;,\&quot;source\&quot;:\&quot;datasource\&quot;,\&quot;MetricsName\&quot;:\&quot;cpu\&quot;,\&quot;value\&quot;:\&quot;49\&quot;,\&quot;_time\&quot;:1626571020000}&quot;</span>,
+      <span class="hljs-string">&quot;format.allow-comments&quot;</span>: <span class="hljs-string">&quot;true&quot;</span>,
+      <span class="hljs-string">&quot;format.ignore-parse-errors&quot;</span>: <span class="hljs-string">&quot;true&quot;</span>,
+      <span class="hljs-string">&quot;offset.reset&quot;</span>: <span class="hljs-string">&quot;earliest&quot;</span>,
+      <span class="hljs-string">&quot;consumer.bootstrap.servers&quot;</span>: <span class="hljs-string">&quot;192.168.100.189:9092&quot;</span>,
+<span class="hljs-attr">      &quot;parallelism&quot;:</span> <span class="hljs-number">1</span>,
+<span class="hljs-attr">      &quot;name&quot;:</span> <span class="hljs-string">&quot;mykafka&quot;</span>
+    }
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: source">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="dataGenSource.html" class="navigation navigation-next " aria-label="Next page: dataGen">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"kafka","level":"1.4.1.1","depth":3,"next":{"title":"dataGen","level":"1.4.1.2","depth":3,"path":"Component/source/dataGenSource.md","ref":"Component/source/dataGenSource.md","articles":[]},"previous":{"title":"source","level":"1.4.1","depth":2,"path":"Component/source/README.md","ref":"Component/source/README.md","articles":[{"title":"kafka","level":"1.4.1.1","depth":3,"path":"Component/source/kafkaSource.md","ref":"Component/source/kafkaSource.md","articles":[]},{"title":"dataGen","level":"1.4.1.2","depth":3,"path":"Component/source/dataGenSource.md","ref":"Component/source/dataGenSource.md","articles":[]},{"title":"jdbc","level":"1.4.1.3","depth":3,"path":"Component/source/jdbcSource.md","ref":"Component/source/jdbcSource.md","articles":[]},{"title":"file","level":"1.4.1.4","depth":3,"path":"Component/source/fileSource.md","ref":"Component/source/fileSource.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","livereload"],"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Component/source/kafkaSource.md","mtime":"2021-08-08T14:01:31.161Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-08T15:05:06.422Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
