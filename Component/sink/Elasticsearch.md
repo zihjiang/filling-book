@@ -1,7 +1,5 @@
 # Elasticsearch
 
-# Sql
-
 ### Description
 
 sink到elasticsearch

@@ -6,7 +6,7 @@ Filling, 如其名, 致力于填充你的各种存储,  是一个`非常易用`�
 
 Filling是一个基于[Flink](https://flink.apache.org/)的流式数据处理工具, Filling将每条数据以表的形式进行抽象, 后续还会支持托拉拽式编程的流处理引擎。
 
-Filling组件分为数据源(source)、算子(transfrom) 和 输出(sink)三种
+Filling组件分为数据源(source)、算子(transfrom) 和 输出(sink)三种, 可以像拼积木一样来处理你的数据
 
 ------
 
@@ -22,7 +22,7 @@ transfrom --> sink[sink]
 
 复杂一点的处理流程:
 
-``` Mermaid
+```Mermaid
 graph TD
 source-kafka(日志数据-kakfa) --> transfrom01(join)
 source-jdbc(cmdb数据-mysql) --> transfrom01(join)
@@ -50,13 +50,14 @@ transfrom03 --> sink-jdbc[jdbc]
 
 Filling，即基于Flink的流式数据处理工具，预期将拥有如下特性：
 
-- 快速且高效处理流式数据, 离线数据, 简单易用，灵活配置，无需开发
 - 海量数据处理能力
 - 模块化和插件化，易于扩展
+- 快速且高效处理流式数据, 离线数据, 简单易用，灵活配置，无需开发
 - 核心模块基于Flink实现，实现精确一次语义，同时提供高性能、断点恢复等支持
 - 核心数据抽象为table，操作过程近似对table进行操作，更加贴近数据摄取和清洗场景的用户使用习惯
 - 实现诸如Kafka、File、JDBC、ES等常见输入输出，支持Add、Drop, Rename, 等常用转换逻辑，还支持flink所有函数, 支持流join和窗口统计，并支持sql等脚本对数据自定义操作
 - 提供对于服务自身和运行流程任务的监控
 - 流式处理任务运行环境支持裸机部署或对接Hadoop平台及其部分商业版本
 
-预期在将来，Filling可以逐步满足现场实施交付从多种来源，特别是Kafka来源实时接入数据，对其进行简单清洗、格式整理和可能的统计接入其他产品的需求。
+预期在将来，Filling可以逐步满足多种来源的数据处理，特别是Kafka来源实时接入数据，对其进行简单清洗、格式整理和可能的统计接入其他产品的需求。
+

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>kafka · GitBook</title>
+        <title>配置 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,7 +65,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="dataGenSource.html" />
+    <link rel="next" href="../source/" />
     
     
     <link rel="prev" href="./" />
@@ -227,9 +227,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../env/">
+        <li class="chapter " data-level="1.5.1" data-path="./">
             
-                <a href="../env/">
+                <a href="./">
             
                     
                     env
@@ -241,9 +241,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1.1" data-path="../env/config.html">
+        <li class="chapter active" data-level="1.5.1.1" data-path="config.html">
             
-                <a href="../env/config.html">
+                <a href="config.html">
             
                     
                     配置
@@ -259,9 +259,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="./">
+        <li class="chapter " data-level="1.5.2" data-path="../source/">
             
-                <a href="./">
+                <a href="../source/">
             
                     
                     source
@@ -273,9 +273,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.5.2.1" data-path="kafkaSource.html">
+        <li class="chapter " data-level="1.5.2.1" data-path="../source/kafkaSource.html">
             
-                <a href="kafkaSource.html">
+                <a href="../source/kafkaSource.html">
             
                     
                     kafka
@@ -286,9 +286,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2.2" data-path="dataGenSource.html">
+        <li class="chapter " data-level="1.5.2.2" data-path="../source/dataGenSource.html">
             
-                <a href="dataGenSource.html">
+                <a href="../source/dataGenSource.html">
             
                     
                     dataGen
@@ -299,9 +299,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2.3" data-path="jdbcSource.html">
+        <li class="chapter " data-level="1.5.2.3" data-path="../source/jdbcSource.html">
             
-                <a href="jdbcSource.html">
+                <a href="../source/jdbcSource.html">
             
                     
                     jdbc
@@ -312,9 +312,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2.4" data-path="fileSource.html">
+        <li class="chapter " data-level="1.5.2.4" data-path="../source/fileSource.html">
             
-                <a href="fileSource.html">
+                <a href="../source/fileSource.html">
             
                     
                     file
@@ -650,7 +650,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >kafka</a>
+        <a href="../.." >配置</a>
     </h1>
 </div>
 
@@ -665,10 +665,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="kafka&#x6570;&#x636E;&#x6E90;">Kafka&#x6570;&#x636E;&#x6E90;</h1>
-<p>Kafka&#x6570;&#x636E;&#x6E90;&#xFF08;<code>KafkaSource</code>&#xFF09;&#x4ECE;&#x6307;&#x5B9A;Kafka&#x96C6;&#x7FA4;&#x7684;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6307;&#x5B9A;&#x4E3B;&#x9898;&#x4E2D;&#x6D88;&#x8D39;&#x6570;&#x636E;&#x3002;</p>
-<hr>
-<h3 id="options"><a href="">Options</a></h3>
+                                <h1 id="env">env</h1>
+<p>flink&#x63D0;&#x4EA4;&#x4EFB;&#x52A1;&#x65F6;&#x6307;&#x5B9A;&#x7684;&#x53C2;&#x6570;, <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/zh/docs/deployment/config/" target="_blank">&#x8BE6;&#x60C5;</a></p>
 <table>
 <thead>
 <tr>
@@ -680,102 +678,132 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="">topics</a></td>
-<td>array/string</td>
-<td>yes</td>
-<td>-</td>
-</tr>
-<tr>
-<td><a href="">group.id</a></td>
-<td>string</td>
+<td>job.name</td>
+<td></td>
 <td>no</td>
-<td>-</td>
+<td>filling</td>
 </tr>
 <tr>
-<td><a href="">bootstrap.servers</a></td>
-<td>string</td>
-<td>yes</td>
-<td>-</td>
-</tr>
-<tr>
-<td><a href="">schema</a></td>
-<td>string</td>
-<td>yes</td>
-<td>-</td>
-</tr>
-<tr>
-<td><a href="">format.type</a></td>
-<td>string</td>
-<td>yes</td>
-<td>json</td>
-</tr>
-<tr>
-<td><a href="">format.field_delimiter</a></td>
-<td>String</td>
+<td>execution.buffer.timeout</td>
+<td></td>
 <td>no</td>
-<td>,</td>
+<td></td>
 </tr>
 <tr>
-<td><a href="">consumer.*</a></td>
-<td>string</td>
+<td>execution.parallelism</td>
+<td></td>
 <td>no</td>
-<td>-</td>
+<td>1</td>
 </tr>
 <tr>
-<td><a href="">offset.reset</a></td>
-<td>string</td>
+<td>execution.max-parallelism</td>
+<td></td>
 <td>no</td>
-<td>-</td>
+<td>-1</td>
 </tr>
 <tr>
-<td><a href="">common-options</a></td>
-<td>string</td>
+<td>execution.checkpoint.interval</td>
+<td></td>
 <td>no</td>
-<td>-</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>execution.checkpoint.mode</td>
+<td></td>
+<td>no</td>
+<td></td>
+</tr>
+<tr>
+<td>execution.checkpoint.timeout</td>
+<td></td>
+<td>no</td>
+<td></td>
+</tr>
+<tr>
+<td>execution.checkpoint.data-uri</td>
+<td></td>
+<td>no</td>
+<td></td>
+</tr>
+<tr>
+<td>execution.max-concurrent-checkpoints</td>
+<td></td>
+<td>no</td>
+<td></td>
+</tr>
+<tr>
+<td>execution.checkpoint.cleanup-mode</td>
+<td></td>
+<td>no</td>
+<td></td>
+</tr>
+<tr>
+<td>execution.checkpoint.min-pause</td>
+<td></td>
+<td>no</td>
+<td></td>
+</tr>
+<tr>
+<td>execution.checkpoint.fail-on-error</td>
+<td></td>
+<td>no</td>
+<td></td>
+</tr>
+<tr>
+<td>execution.restart.strategy</td>
+<td></td>
+<td>no</td>
+<td></td>
+</tr>
+<tr>
+<td>execution.restart.attempts</td>
+<td></td>
+<td>no</td>
+<td></td>
+</tr>
+<tr>
+<td>execution.restart.delayBetweenAttempts</td>
+<td></td>
+<td>no</td>
+<td></td>
+</tr>
+<tr>
+<td>execution.restart.failureInterval</td>
+<td></td>
+<td>no</td>
+<td></td>
+</tr>
+<tr>
+<td>execution.restart.failureRate</td>
+<td></td>
+<td>no</td>
+<td></td>
+</tr>
+<tr>
+<td>execution.restart.delayInterval</td>
+<td></td>
+<td>no</td>
+<td></td>
+</tr>
+<tr>
+<td>execution.query.state.max-retention</td>
+<td></td>
+<td>no</td>
+<td></td>
+</tr>
+<tr>
+<td>execution.query.state.min-retention</td>
+<td></td>
+<td>no</td>
+<td></td>
+</tr>
+<tr>
+<td>execution.state.backend</td>
+<td></td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
-<h2 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h2>
-<h5 id="topics-arraystring">topics (array[string])</h5>
-<p>topic&#x540D;&#x79F0;&#x3002;</p>
-<h5 id="groupid-string-optinal">group_id (string) (optinal)</h5>
-<p>&#x8BA2;&#x9605;&#x7EC4;id&#x3002;&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#xFF0C;&#x6BCF;&#x6B21;&#x8FD0;&#x884C;&#x65F6;&#x90FD;&#x4F1A;&#x6839;&#x636E;&#x7EC4;&#x4EF6;id&#x81EA;&#x52A8;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x3002;&#x5982;&#x679C;&#x7EC4;&#x4EF6;id&#x6CA1;&#x6709;&#x663E;&#x793A;&#x6307;&#x5B9A;&#x800C;&#x662F;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x8BDD;&#xFF0C;&#x5219;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x6BCF;&#x6B21;&#x6267;&#x884C;&#x65F6;&#x90FD;&#x4F1A;&#x5206;&#x914D;&#x5230;&#x76F8;&#x540C;&#x7684;&#x8BA2;&#x9605;&#x7EC4;&#xFF0C;&#x56E0;&#x6B64;&#x5EFA;&#x8BAE;&#x6307;&#x5B9A;&#x3002;</p>
-<h5 id="consumerbootstrapservers-string">consumer.bootstrap.servers (string)</h5>
-<p>Kafka&#x96C6;&#x7FA4;&#x5730;&#x5740;&#xFF0C;&#x591A;&#x4E2A;&#x5730;&#x5740;&#x7528;<code>,</code>&#x9694;&#x5F00;&#x3002;</p>
-<h5 id="schema-string">schema (String)</h5>
-<p>&#x7528;&#x4E8E;&#x751F;&#x6210;source&#x8868;&#x7684;schema, &#x5982;&#x679C;&#x6570;&#x636E;&#x548C;schema&#x5B57;&#x6BB5;&#x4E0D;&#x4E00;&#x81F4;, &#x5219;&#x4F1A;&#x51FA;&#x73B0;&#x5B57;&#x6BB5;&#x4E3A;&#x7A7A;&#x7684;&#x95EE;&#x9898;</p>
-<h5 id="formattype-string">format.type (string)</h5>
-<p>&#x8F93;&#x5165;&#x683C;&#x5F0F;&#xFF0C;&#x652F;&#x6301;Json,csv&#x548C;&#x4E0E;text&#x683C;&#x5F0F;</p>
-<h5 id="formatfielddelimiter-optinal">format.field_delimiter (optinal)</h5>
-<p>&#x4EC5;&#x5728;format.type&#x4E3A;csv&#x65F6;&#x751F;&#x6548;, &#x6307;&#x5B9A;&#x5206;&#x9694;&#x7B26;, &#x4E14;&#x53EA;&#x80FD;&#x662F;&#x4E00;&#x4E2A;char&#x5B57;&#x7B26;</p>
-<h5 id="offsetreset">offset.reset</h5>
-<p>  &#x4EE5;&#x4F55;&#x79CD;&#x65B9;&#x5F0F;&#x6D88;&#x8D39;kafka&#x6570;&#x636E;, &#x5206;&#x522B;&#x662F;:</p>
-<pre><code>earliest: &#x5C3D;&#x53EF;&#x80FD;&#x4ECE;&#x6700;&#x65E9;&#x6D88;&#x8D39;&#x6570;&#x636E;
-
-latest: &#x4ECE;&#x6700;&#x65B0;&#x5904;&#x6D88;&#x8D39;&#x6570;&#x636E;
-
-fromTimestamp: &#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x6233;&#x6D88;&#x8D39;, // TODO
-
-fromGroupOffsets: &#x4ECE;&#x5F53;&#x524D;&#x7684;offset&#x6D88;&#x8D39;, &#x82E5;&#x679C;&#x4E0D;&#x5B58;&#x5728;offset, &#x5219;&#x548C;latest&#x4E00;&#x81F4;
-</code></pre><h5 id="&#x5176;&#x4ED6;&#x914D;&#x7F6E;-consumer-optinal">&#x5176;&#x4ED6;&#x914D;&#x7F6E; consumer.* (optinal)</h5>
-<p>&#x9664;&#x4E86;&#x4EE5;&#x4E0A;&#x5FC5;&#x5907;&#x7684;kafka consumer&#x5BA2;&#x6237;&#x7AEF;&#x5FC5;&#x987B;&#x6307;&#x5B9A;&#x7684;&#x53C2;&#x6570;&#x5916;&#xFF0C;&#x7528;&#x6237;&#x8FD8;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x591A;&#x4E2A;consumer&#x5BA2;&#x6237;&#x7AEF;&#x975E;&#x5FC5;&#x987B;&#x53C2;&#x6570;&#xFF0C;&#x8986;&#x76D6;&#x4E86;<a href="http://kafka.apache.org/documentation.html#oldconsumerconfigs" target="_blank">kafka&#x5B98;&#x65B9;&#x6587;&#x6863;&#x6307;&#x5B9A;&#x7684;&#x6240;&#x6709;consumer&#x53C2;&#x6570;</a>.</p>
-<hr>
-<h2 id="&#x914D;&#x7F6E;&#x793A;&#x4F8B;">&#x914D;&#x7F6E;&#x793A;&#x4F8B;</h2>
-<pre><code class="lang-yaml">    {
-<span class="hljs-attr">      &quot;plugin_name&quot;:</span> <span class="hljs-string">&quot;KafkaTableStream&quot;</span>,
-      <span class="hljs-string">&quot;consumer.group.id&quot;</span>: <span class="hljs-string">&quot;waterdrop15&quot;</span>,
-<span class="hljs-attr">      &quot;topics&quot;:</span> <span class="hljs-string">&quot;batchSend&quot;</span>,
-<span class="hljs-attr">      &quot;result_table_name&quot;:</span> <span class="hljs-string">&quot;KafkaTableStreamTable&quot;</span>,
-      <span class="hljs-string">&quot;format.type&quot;</span>: <span class="hljs-string">&quot;json&quot;</span>,
-<span class="hljs-attr">      &quot;schema&quot;:</span> <span class="hljs-string">&quot;{\&quot;host\&quot;:\&quot;192.168.1.103\&quot;,\&quot;source\&quot;:\&quot;datasource\&quot;,\&quot;MetricsName\&quot;:\&quot;cpu\&quot;,\&quot;value\&quot;:\&quot;49\&quot;,\&quot;_time\&quot;:1626571020000}&quot;</span>,
-      <span class="hljs-string">&quot;format.allow-comments&quot;</span>: <span class="hljs-string">&quot;true&quot;</span>,
-      <span class="hljs-string">&quot;format.ignore-parse-errors&quot;</span>: <span class="hljs-string">&quot;true&quot;</span>,
-      <span class="hljs-string">&quot;offset.reset&quot;</span>: <span class="hljs-string">&quot;earliest&quot;</span>,
-      <span class="hljs-string">&quot;consumer.bootstrap.servers&quot;</span>: <span class="hljs-string">&quot;192.168.100.189:9092&quot;</span>,
-<span class="hljs-attr">      &quot;parallelism&quot;:</span> <span class="hljs-number">1</span>,
-<span class="hljs-attr">      &quot;name&quot;:</span> <span class="hljs-string">&quot;mykafka&quot;</span>
-    }
-</code></pre>
 
                                 
                                 </section>
@@ -803,12 +831,12 @@ fromGroupOffsets: &#x4ECE;&#x5F53;&#x524D;&#x7684;offset&#x6D88;&#x8D39;, &#x82E
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: source">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: env">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="dataGenSource.html" class="navigation navigation-next " aria-label="Next page: dataGen">
+                <a href="../source/" class="navigation navigation-next " aria-label="Next page: source">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -819,7 +847,7 @@ fromGroupOffsets: &#x4ECE;&#x5F53;&#x524D;&#x7684;offset&#x6D88;&#x8D39;, &#x82E
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"kafka","level":"1.5.2.1","depth":3,"next":{"title":"dataGen","level":"1.5.2.2","depth":3,"path":"Component/source/dataGenSource.md","ref":"Component/source/dataGenSource.md","articles":[]},"previous":{"title":"source","level":"1.5.2","depth":2,"path":"Component/source/README.md","ref":"Component/source/README.md","articles":[{"title":"kafka","level":"1.5.2.1","depth":3,"path":"Component/source/kafkaSource.md","ref":"Component/source/kafkaSource.md","articles":[]},{"title":"dataGen","level":"1.5.2.2","depth":3,"path":"Component/source/dataGenSource.md","ref":"Component/source/dataGenSource.md","articles":[]},{"title":"jdbc","level":"1.5.2.3","depth":3,"path":"Component/source/jdbcSource.md","ref":"Component/source/jdbcSource.md","articles":[]},{"title":"file","level":"1.5.2.4","depth":3,"path":"Component/source/fileSource.md","ref":"Component/source/fileSource.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","livereload"],"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Component/source/kafkaSource.md","mtime":"2021-08-09T09:09:28.631Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-10T07:59:43.533Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"配置","level":"1.5.1.1","depth":3,"next":{"title":"source","level":"1.5.2","depth":2,"path":"Component/source/README.md","ref":"Component/source/README.md","articles":[{"title":"kafka","level":"1.5.2.1","depth":3,"path":"Component/source/kafkaSource.md","ref":"Component/source/kafkaSource.md","articles":[]},{"title":"dataGen","level":"1.5.2.2","depth":3,"path":"Component/source/dataGenSource.md","ref":"Component/source/dataGenSource.md","articles":[]},{"title":"jdbc","level":"1.5.2.3","depth":3,"path":"Component/source/jdbcSource.md","ref":"Component/source/jdbcSource.md","articles":[]},{"title":"file","level":"1.5.2.4","depth":3,"path":"Component/source/fileSource.md","ref":"Component/source/fileSource.md","articles":[]}]},"previous":{"title":"env","level":"1.5.1","depth":2,"path":"Component/env/README.md","ref":"Component/env/README.md","articles":[{"title":"配置","level":"1.5.1.1","depth":3,"path":"Component/env/config.md","ref":"Component/env/config.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","livereload"],"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Component/env/config.md","mtime":"2021-08-09T06:28:26.275Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-10T07:59:43.533Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
