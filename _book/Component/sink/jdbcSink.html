@@ -22,6 +22,14 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -665,7 +673,112 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="jdbc">Jdbc</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#sink-plugin--jdbc"><b>1.1. </b>Sink plugin : JDBC</a></li><ul><li><span class="title-icon "></span><a href="#description"><b>1.1.1. </b>Description</a></li><li><span class="title-icon "></span><a href="#options"><b>1.1.2. </b>Options</a></li></ul><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;&#x793A;&#x4F8B;"><b>1.2. </b>&#x914D;&#x7F6E;&#x793A;&#x4F8B;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="sink-plugin--jdbc"><a name="sink-plugin--jdbc" class="anchor-navigation-ex-anchor" href="#sink-plugin--jdbc"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Sink plugin : JDBC</h2>
+<ul>
+<li>Author: zihjiang</li>
+<li>Version: 0.0.1</li>
+</ul>
+<h3 id="description"><a name="description" class="anchor-navigation-ex-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. Description</h3>
+<p>&#x901A;&#x8FC7;jdbc&#x7684;&#x65B9;&#x5F0F;sink&#x5230;&#x6570;&#x636E;&#x5E93;</p>
+<h3 id="options"><a name="options" class="anchor-navigation-ex-anchor" href="#options"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. Options</h3>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>required</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#driver-string">driver</a></td>
+<td>string</td>
+<td>yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="#url-string">url</a></td>
+<td>string</td>
+<td>yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="#username-string">username</a></td>
+<td>string</td>
+<td>yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="#password-string">password</a></td>
+<td>string</td>
+<td>no</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="#query-string">query</a></td>
+<td>string</td>
+<td>yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="#batch_size">batch_size</a></td>
+<td>int</td>
+<td>no</td>
+<td>5000</td>
+</tr>
+<tr>
+<td>batch_interval_ms</td>
+<td>int</td>
+<td>No</td>
+<td>200</td>
+</tr>
+<tr>
+<td>max_retries</td>
+<td>Int</td>
+<td></td>
+<td>5</td>
+</tr>
+<tr>
+<td><a href="#common-options-string">common-options</a></td>
+<td>string</td>
+<td>no</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h5 id="driver-string"><a name="driver-string" class="anchor-navigation-ex-anchor" href="#driver-string"><i class="fa fa-link" aria-hidden="true"></i></a>driver [string]</h5>
+<p>&#x9A71;&#x52A8;&#x540D;&#xFF0C;&#x5982;<code>com.mysql.jdbc.Driver</code></p>
+<p>&#x9ED8;&#x8BA4;&#x652F;&#x6301;&#x5305;&#x542B;mysql(com.mysql.jdbc.Driver)&#x548C;clickhouse(ru.yandex.clickhouse.ClickHouseDriver)&#x9A71;&#x52A8;</p>
+<h5 id="url-string"><a name="url-string" class="anchor-navigation-ex-anchor" href="#url-string"><i class="fa fa-link" aria-hidden="true"></i></a>url [string]</h5>
+<p>JDBC&#x8FDE;&#x63A5;&#x7684;URL&#x3002;&#x5982;&#xFF1A;<code>jdbc:mysql://localhost:3306/test</code></p>
+<h5 id="username-string"><a name="username-string" class="anchor-navigation-ex-anchor" href="#username-string"><i class="fa fa-link" aria-hidden="true"></i></a>username [string]</h5>
+<p>&#x7528;&#x6237;&#x540D;</p>
+<h5 id="password-string"><a name="password-string" class="anchor-navigation-ex-anchor" href="#password-string"><i class="fa fa-link" aria-hidden="true"></i></a>password [string]</h5>
+<p>&#x5BC6;&#x7801;</p>
+<h5 id="query-string"><a name="query-string" class="anchor-navigation-ex-anchor" href="#query-string"><i class="fa fa-link" aria-hidden="true"></i></a>query [string]</h5>
+<p>&#x67E5;&#x8BE2;&#x8BED;&#x53E5;</p>
+<h5 id="batchsize-int"><a name="batchsize-int" class="anchor-navigation-ex-anchor" href="#batchsize-int"><i class="fa fa-link" aria-hidden="true"></i></a>batch_size [int]</h5>
+<p>&#x6BCF;&#x4E2A;&#x6279;&#x6B21;&#x591A;&#x5C11;&#x6570;&#x636E;</p>
+<h5 id="batchintervalms--int"><a name="batchintervalms--int" class="anchor-navigation-ex-anchor" href="#batchintervalms--int"><i class="fa fa-link" aria-hidden="true"></i></a>batch_interval_ms  [int]</h5>
+<p>&#x591A;&#x4E45;&#x63D0;&#x4EA4;&#x4E00;&#x4E2A;&#x6279;&#x6B21;</p>
+<h5 id="maxretries--int"><a name="maxretries--int" class="anchor-navigation-ex-anchor" href="#maxretries--int"><i class="fa fa-link" aria-hidden="true"></i></a>max_retries  [int]</h5>
+<p>&#x91CD;&#x8BD5;&#x6700;&#x5927;&#x6B21;&#x6570;</p>
+<h5 id="common-options-string"><a name="common-options-string" class="anchor-navigation-ex-anchor" href="#common-options-string"><i class="fa fa-link" aria-hidden="true"></i></a>common options [string]</h5>
+<p><code>Source</code> &#x63D2;&#x4EF6;&#x901A;&#x7528;&#x53C2;&#x6570;&#xFF0C;&#x8BE6;&#x60C5;&#x53C2;&#x7167; <a href="../../zh-cn/v2/flink/configuration/source-plugins">Source Plugin</a></p>
+<h2 id="&#x914D;&#x7F6E;&#x793A;&#x4F8B;"><a name="&#x914D;&#x7F6E;&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x914D;&#x7F6E;&#x793A;&#x4F8B;</h2>
+<pre><code class="lang-yaml">    {
+<span class="hljs-attr">      &quot;source_table_name&quot;:</span> <span class="hljs-string">&quot;JdbcSourceTable&quot;</span>,
+<span class="hljs-attr">      &quot;plugin_name&quot;:</span> <span class="hljs-string">&quot;ClickHouseSink&quot;</span>,
+<span class="hljs-attr">      &quot;driver&quot;:</span> <span class="hljs-string">&quot;ru.yandex.clickhouse.ClickHouseDriver&quot;</span>,
+<span class="hljs-attr">      &quot;url&quot;:</span> <span class="hljs-string">&quot;jdbc:clickhouse://192.168.100.15:8123/aiops&quot;</span>,
+<span class="hljs-attr">      &quot;query&quot;:</span> <span class="hljs-string">&quot;insert into host_metric10(host, metric, value, system, instance, _time) values(?,?,?,?,?,?)&quot;</span>,
+<span class="hljs-attr">      &quot;batch_size&quot;:</span> <span class="hljs-string">&quot;2000&quot;</span>,
+<span class="hljs-attr">      &quot;params&quot;:</span> [<span class="hljs-string">&quot;host&quot;</span>, <span class="hljs-string">&quot;metric&quot;</span>, <span class="hljs-string">&quot;value&quot;</span>, <span class="hljs-string">&quot;system&quot;</span>, <span class="hljs-string">&quot;instance&quot;</span>, <span class="hljs-string">&quot;_time&quot;</span>],
+<span class="hljs-attr">      &quot;parallelism&quot;:</span> <span class="hljs-number">5</span>,
+<span class="hljs-attr">      &quot;name&quot;:</span> <span class="hljs-string">&quot;mytest&quot;</span>
+    }
+</code></pre>
 
                                 
                                 </section>
@@ -709,7 +822,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Jdbc","level":"1.5.4.1","depth":3,"next":{"title":"Console","level":"1.5.4.2","depth":3,"path":"Component/sink/ConsoleSink.md","ref":"Component/sink/ConsoleSink.md","articles":[]},"previous":{"title":"sink","level":"1.5.4","depth":2,"path":"Component/README.md","ref":"Component/README.md","articles":[{"title":"Jdbc","level":"1.5.4.1","depth":3,"path":"Component/sink/jdbcSink.md","ref":"Component/sink/jdbcSink.md","articles":[]},{"title":"Console","level":"1.5.4.2","depth":3,"path":"Component/sink/ConsoleSink.md","ref":"Component/sink/ConsoleSink.md","articles":[]},{"title":"Console","level":"1.5.4.3","depth":3,"path":"Component/sink/ConsoleSink.md","ref":"Component/sink/ConsoleSink.md","articles":[]},{"title":"Elasticsearch","level":"1.5.4.4","depth":3,"path":"Component/sink/Elasticsearch.md","ref":"Component/sink/Elasticsearch.md","articles":[]},{"title":"FileSink","level":"1.5.4.5","depth":3,"path":"Component/sink/FileSink.md","ref":"Component/sink/FileSink.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","livereload"],"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Component/sink/jdbcSink.md","mtime":"2021-08-08T12:18:50.810Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-10T07:59:43.533Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Jdbc","level":"1.5.4.1","depth":3,"next":{"title":"Console","level":"1.5.4.2","depth":3,"path":"Component/sink/ConsoleSink.md","ref":"Component/sink/ConsoleSink.md","articles":[]},"previous":{"title":"sink","level":"1.5.4","depth":2,"path":"Component/README.md","ref":"Component/README.md","articles":[{"title":"Jdbc","level":"1.5.4.1","depth":3,"path":"Component/sink/jdbcSink.md","ref":"Component/sink/jdbcSink.md","articles":[]},{"title":"Console","level":"1.5.4.2","depth":3,"path":"Component/sink/ConsoleSink.md","ref":"Component/sink/ConsoleSink.md","articles":[]},{"title":"Console","level":"1.5.4.3","depth":3,"path":"Component/sink/ConsoleSink.md","ref":"Component/sink/ConsoleSink.md","articles":[]},{"title":"Elasticsearch","level":"1.5.4.4","depth":3,"path":"Component/sink/Elasticsearch.md","ref":"Component/sink/Elasticsearch.md","articles":[]},{"title":"FileSink","level":"1.5.4.5","depth":3,"path":"Component/sink/FileSink.md","ref":"Component/sink/FileSink.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","anchor-navigation-ex","expandable-chapters-small","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Component/sink/jdbcSink.md","mtime":"2021-08-10T12:51:14.446Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-21T05:21:48.820Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -721,6 +834,10 @@
     
         
         <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
         
     
         

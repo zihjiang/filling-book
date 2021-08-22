@@ -28,7 +28,7 @@
 
 ​	OVERWRITE: 如果存在文件, 则覆盖
 
-NO_OVERWRITE: 如果存在文件, 则追加
+​	NO_OVERWRITE: 如果存在文件, 则追加
 
 ##### format [string]
 

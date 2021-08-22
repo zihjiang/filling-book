@@ -22,6 +22,14 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -665,11 +673,10 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="elasticsearch">Elasticsearch</h1>
-<h1 id="sql">Sql</h1>
-<h3 id="description">Description</h3>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#elasticsearch"><b>1. </b>Elasticsearch</a></li><ul><ul><li><span class="title-icon "></span><a href="#description"><b>1.1.1. </b>Description</a></li><li><span class="title-icon "></span><a href="#options"><b>1.1.2. </b>Options</a></li><li><span class="title-icon "></span><a href="#examples"><b>1.1.3. </b>Examples</a></li></ul></ul></ul></div><a href="#elasticsearch" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="elasticsearch"><a name="elasticsearch" class="anchor-navigation-ex-anchor" href="#elasticsearch"><i class="fa fa-link" aria-hidden="true"></i></a>1. Elasticsearch</h1>
+<h3 id="description"><a name="description" class="anchor-navigation-ex-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. Description</h3>
 <p>sink&#x5230;elasticsearch</p>
-<h3 id="options">Options</h3>
+<h3 id="options"><a name="options" class="anchor-navigation-ex-anchor" href="#options"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. Options</h3>
 <table>
 <thead>
 <tr>
@@ -736,22 +743,22 @@
 </tr>
 </tbody>
 </table>
-<h5 id="hosts-string">hosts [string]</h5>
+<h5 id="hosts-string"><a name="hosts-string" class="anchor-navigation-ex-anchor" href="#hosts-string"><i class="fa fa-link" aria-hidden="true"></i></a>hosts [string]</h5>
 <p>es&#x7684;host&#x5730;&#x5740;, &#x683C;&#x5F0F;&#x4E3A;host:&#x7AEF;&#x53E3;, &#x4F8B;&#x5982;: 10.11.12.1:9200</p>
-<h5 id="index-string">index [string]</h5>
+<h5 id="index-string"><a name="index-string" class="anchor-navigation-ex-anchor" href="#index-string"><i class="fa fa-link" aria-hidden="true"></i></a>index [string]</h5>
 <p>es&#x7684;&#x7D22;&#x5F15;&#x540D;&#x79F0;, </p>
-<h5 id="esbulkflushmaxactions-options-string">es.bulk.flush.max.actions options [string]</h5>
+<h5 id="esbulkflushmaxactions-options-string"><a name="esbulkflushmaxactions-options-string" class="anchor-navigation-ex-anchor" href="#esbulkflushmaxactions-options-string"><i class="fa fa-link" aria-hidden="true"></i></a>es.bulk.flush.max.actions options [string]</h5>
 <p>&#x5237;&#x65B0;&#x524D;&#x8981;&#x7F13;&#x51B2;&#x7684;&#x6700;&#x5927;&#x6587;&#x6863;&#x6570;</p>
-<h5 id="esbulkflushmaxsizemb-options-string">es.bulk.flush.max.size.mb options [string]</h5>
+<h5 id="esbulkflushmaxsizemb-options-string"><a name="esbulkflushmaxsizemb-options-string" class="anchor-navigation-ex-anchor" href="#esbulkflushmaxsizemb-options-string"><i class="fa fa-link" aria-hidden="true"></i></a>es.bulk.flush.max.size.mb options [string]</h5>
 <p>&#x5237;&#x65B0;&#x524D;&#x8981;&#x7F13;&#x51B2;&#x7684;&#x6700;&#x5927;&#x6570;&#x636E;&#x5927;&#x5C0F;( &#x5355;&#x4F4D;&#x662F;M)</p>
-<h5 id="esbulkflushintervalms-options-string">es.bulk.flush.interval.ms options [string]</h5>
+<h5 id="esbulkflushintervalms-options-string"><a name="esbulkflushintervalms-options-string" class="anchor-navigation-ex-anchor" href="#esbulkflushintervalms-options-string"><i class="fa fa-link" aria-hidden="true"></i></a>es.bulk.flush.interval.ms options [string]</h5>
 <p>&#x65E0;&#x8BBA;&#x7F13;&#x51B2;&#x64CD;&#x4F5C;&#x7684;&#x6570;&#x91CF;&#x6216;&#x5927;&#x5C0F;&#x5982;&#x4F55;&#xFF0C;&#x5237;&#x65B0;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x3002;</p>
-<h5 id="esbulkflushbackoffenable-options-string">es.bulk.flush.backoff.enable options [string]</h5>
-<h5 id="esbulkflushbackoffdelay-options-string">es.bulk.flush.backoff.delay options [string]</h5>
-<h5 id="esbulkflushbackoffretries-options-string">es.bulk.flush.backoff.retries options [string]</h5>
-<h5 id="common-options-string">common options [string]</h5>
+<h5 id="esbulkflushbackoffenable-options-string"><a name="esbulkflushbackoffenable-options-string" class="anchor-navigation-ex-anchor" href="#esbulkflushbackoffenable-options-string"><i class="fa fa-link" aria-hidden="true"></i></a>es.bulk.flush.backoff.enable options [string]</h5>
+<h5 id="esbulkflushbackoffdelay-options-string"><a name="esbulkflushbackoffdelay-options-string" class="anchor-navigation-ex-anchor" href="#esbulkflushbackoffdelay-options-string"><i class="fa fa-link" aria-hidden="true"></i></a>es.bulk.flush.backoff.delay options [string]</h5>
+<h5 id="esbulkflushbackoffretries-options-string"><a name="esbulkflushbackoffretries-options-string" class="anchor-navigation-ex-anchor" href="#esbulkflushbackoffretries-options-string"><i class="fa fa-link" aria-hidden="true"></i></a>es.bulk.flush.backoff.retries options [string]</h5>
+<h5 id="common-options-string"><a name="common-options-string" class="anchor-navigation-ex-anchor" href="#common-options-string"><i class="fa fa-link" aria-hidden="true"></i></a>common options [string]</h5>
 <p><code>Transform</code> &#x7EC4;&#x4EF6;&#x901A;&#x7528;&#x53C2;&#x6570;&#xFF0C;&#x8BE6;&#x60C5;&#x53C2;&#x7167; <a href="">Transform</a></p>
-<h3 id="examples">Examples</h3>
+<h3 id="examples"><a name="examples" class="anchor-navigation-ex-anchor" href="#examples"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. Examples</h3>
 <pre><code class="lang-json">{
     <span class="hljs-string">&quot;source_table_name&quot;</span>: <span class="hljs-string">&quot;DataSelector_other&quot;</span>,
     <span class="hljs-string">&quot;plugin_name&quot;</span>: <span class="hljs-string">&quot;Elasticsearch&quot;</span>,
@@ -810,7 +817,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Elasticsearch","level":"1.5.4.4","depth":3,"next":{"title":"FileSink","level":"1.5.4.5","depth":3,"path":"Component/sink/FileSink.md","ref":"Component/sink/FileSink.md","articles":[]},"previous":{"title":"Console","level":"1.5.4.3","depth":3,"path":"Component/sink/ConsoleSink.md","ref":"Component/sink/ConsoleSink.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","livereload"],"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Component/sink/Elasticsearch.md","mtime":"2021-08-09T14:20:46.722Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-10T07:59:43.533Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Elasticsearch","level":"1.5.4.4","depth":3,"next":{"title":"FileSink","level":"1.5.4.5","depth":3,"path":"Component/sink/FileSink.md","ref":"Component/sink/FileSink.md","articles":[]},"previous":{"title":"Console","level":"1.5.4.3","depth":3,"path":"Component/sink/ConsoleSink.md","ref":"Component/sink/ConsoleSink.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","anchor-navigation-ex","expandable-chapters-small","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Component/sink/Elasticsearch.md","mtime":"2021-08-10T12:39:17.965Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-21T05:21:48.820Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -822,6 +829,10 @@
     
         
         <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
         
     
         
