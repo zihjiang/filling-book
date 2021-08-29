@@ -13,7 +13,7 @@
 | [rowtime.watermark.tumble.ms](#rowtime.watermark.tumble.ms)  | int    | yes      |               |
 | [rowtime.watermark.tumble.delay.ms](#rowtime.watermark.tumble.delay.ms) | int    | yes      |               |
 | [group.fields](#group.fields)                                | Array  | Yes      |               |
-| [group.*.function](#group.*.function)                        | Array  | Yes      |               |
+| [group.*.function](#group.*.function)                        | Array  | no       | ["count"]     |
 | [custom.field](#custom.field)                                | Array  | no       |               |
 | [custom.field.*.script](#custom.field.*.script)              | string | no       |               |
 | [common-options](#common-options-string)                     | string | no       | -             |
@@ -36,7 +36,7 @@
 
 ##### group.*.function [int]
 
-\*是指每个 ``group.fields``, 需要显示的指定每个字段聚合使用的函数, 可选择: max, count, min
+\*是指每个 ``group.fields``, 需要显示的指定每个字段聚合使用的函数, 可选择: max, count, min, 默认为count
 
 ##### custom.field [array]
 
