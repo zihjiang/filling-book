@@ -14,7 +14,7 @@
 | [rowtime.watermark.tumble.delay.ms](#rowtime.watermark.tumble.delay.ms) | int    | yes      |               |
 | [group.fields](#group.fields)                                | Array  | Yes      |               |
 | [group.*.function](#group.*.function)                        | Array  | no       | ["count"]     |
-| [custom.field](#custom.field)                                | Array  | no       |               |
+| [custom.fields](#custom.fields)                              | Array  | no       |               |
 | [custom.field.*.script](#custom.field.*.script)              | string | no       |               |
 | [common-options](#common-options-string)                     | string | no       | -             |
 
@@ -38,7 +38,7 @@
 
 \*是指每个 ``group.fields``, 需要显示的指定每个字段聚合使用的函数, 可选择: max, count, min, 默认为count
 
-##### custom.field [array]
+##### custom.fields [array]
 
 除了对``group.fields``字段聚合, 还可以自定义聚合字段, 这里设置的是字段名称
 
