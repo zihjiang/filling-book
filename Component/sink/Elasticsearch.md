@@ -10,6 +10,7 @@ sink到elasticsearch
 | ---------------------------------------- | ------ | -------- | ------------- |
 | [hosts](#hosts)                          | string | yes      | -             |
 | index                                    | String | yes      |               |
+| index_id_field                           | String | No       |               |
 | es.bulk.flush.max.actions                | int    | no       |               |
 | es.bulk.flush.max.size.mb                | int    | no       |               |
 | es.bulk.flush.interval.ms                | int    | no       |               |
@@ -23,6 +24,14 @@ sink到elasticsearch
 es的host地址, 格式为host:端口, 例如: 10.11.12.1:9200
 
 ##### index [string]
+
+es的索引名称, 
+
+index_id_field
+
+es中的_id字段, 可以是一个字符串, 也可以是es中的一个字段, 如果找不到该字段, 则默认是字符串, 例如(index_id_field: id), 如果id字段存在上一个算子中, 则取id字段, 否则是字符串"id", 注意: 当id值相同时, 会覆盖原有的数据, 最后只保留最新的一条
+
+#####  [string]
 
 es的索引名称, 
 
