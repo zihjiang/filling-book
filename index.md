@@ -48,6 +48,8 @@ transfrom03 --> sink-jdbc[jdbc]
 
 - Filling-core：Filling的核心流处理程序包，运行在flink集群环境下或在本地java环境以测试模式运行。Filling-core可以通过提供的url或配置文件读取处理任务内容并执行。通过Filling-web/Filling-service提交的任务将会通过url获取处理任务信息；用户也可以绕过上述服务直接提交Filling-core任务到flink集群上运行，此时可以指定url，也可以指定配置文件地址通过文件启动处理任务。
 
+- Filling-edge-core: Filling-edge的核心流处理程序包, 拥有大多数filling特性, 包括流式处理,  以单独进程运行在任何x86或arm架构的服务器中, 主要以采集, 收集目标信息为目的,拥有良好的性能以及优秀的处理速度, 得益于go语言,不依赖于flink环境,通过Filling-web/Filling-service提交的任务将会通过url获取处理任务信息
+
 Filling，即基于Flink的流式数据处理工具，预期将拥有如下特性：
 
 - 海量数据处理能力
@@ -58,6 +60,14 @@ Filling，即基于Flink的流式数据处理工具，预期将拥有如下特�
 - 实现诸如Kafka、File、JDBC、ES等常见输入输出，支持Add、Drop, Rename, 等常用转换逻辑，还支持flink所有函数, 支持流join和窗口统计，并支持sql等脚本对数据自定义操作
 - 提供对于服务自身和运行流程任务的监控
 - 流式处理任务运行环境支持裸机部署或对接Hadoop平台及其部分商业版本
+
+Filling-edge, 预期将拥有以下特性:
+- 收集,处理大量数据能力
+- 弥补filling对于细微数据采集的能力不足,例如: 支持http client, http server, 和采集文件
+- 模块化和插件化，易于扩展
+- 快速且高效处理流式数据, 离线数据, 简单易用，灵活配置，无需开发
+- 基于go语言实现, 占用服务器资源更少, 安装包更小, 启动速度更快
+- 运行在任机器上, 跨平台无需二次开发
 
 预期在将来，Filling可以逐步满足多种来源的数据处理，特别是Kafka来源实时接入数据，对其进行简单清洗、格式整理和可能的统计接入其他产品的需求。
 
