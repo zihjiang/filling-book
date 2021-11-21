@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>EncodeBase64 · GitBook</title>
+        <title>FieldOrder · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -73,10 +73,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="FieldJavaScript.html" />
+    <link rel="next" href="FieldRemove.html" />
     
     
-    <link rel="prev" href="DecodeBase64.html" />
+    <link rel="prev" href="FieldOperation.html" />
     
 
     </head>
@@ -343,7 +343,7 @@
                 <a href="./">
             
                     
-                    transfrom
+                    transform
             
                 </a>
             
@@ -404,7 +404,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.3.5" data-path="EncodeBase64.html">
+        <li class="chapter " data-level="1.5.3.5" data-path="EncodeBase64.html">
             
                 <a href="EncodeBase64.html">
             
@@ -443,7 +443,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3.8" data-path="FieldOrder.html">
+        <li class="chapter active" data-level="1.5.3.8" data-path="FieldOrder.html">
             
                 <a href="FieldOrder.html">
             
@@ -658,7 +658,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >EncodeBase64</a>
+        <a href="../.." >FieldOrder</a>
     </h1>
 </div>
 
@@ -673,14 +673,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#encodebase64"><b>1. </b>EncodeBase64</a></li><li><span class="title-icon "></span><a href="#decodebase64"><b>2. </b>DecodeBase64</a></li><ul><ul><li><span class="title-icon "></span><a href="#description"><b>2.1.1. </b>Description</a></li></ul></ul></ul></div><a href="#encodebase64" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="encodebase64"><a name="encodebase64" class="anchor-navigation-ex-anchor" href="#encodebase64"><i class="fa fa-link" aria-hidden="true"></i></a>1. EncodeBase64</h1>
-<h1 id="decodebase64"><a name="decodebase64" class="anchor-navigation-ex-anchor" href="#decodebase64"><i class="fa fa-link" aria-hidden="true"></i></a>2. DecodeBase64</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#fieldorder"><b>1. </b>FieldOrder</a></li><ul><ul><li><span class="title-icon "></span><a href="#description"><b>1.1.1. </b>Description</a></li></ul></ul></ul></div><a href="#fieldorder" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="fieldorder"><a name="fieldorder" class="anchor-navigation-ex-anchor" href="#fieldorder"><i class="fa fa-link" aria-hidden="true"></i></a>1. FieldOrder</h1>
 <ul>
 <li>Author: zihjiang</li>
 <li>Version: 0.0.1</li>
 </ul>
-<h3 id="description"><a name="description" class="anchor-navigation-ex-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.1. Description</h3>
-<p>debase64&#x67D0;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;</p>
+<h3 id="description"><a name="description" class="anchor-navigation-ex-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. Description</h3>
+<p>&#x6392;&#x5E8F;&#x6570;&#x636E;&#x8868;</p>
 <table>
 <thead>
 <tr>
@@ -692,14 +691,8 @@
 </thead>
 <tbody>
 <tr>
-<td>source_field</td>
-<td>string</td>
-<td>yes</td>
-<td></td>
-</tr>
-<tr>
-<td>target_field</td>
-<td>string</td>
+<td>field_and_sort</td>
+<td>array</td>
 <td>yes</td>
 <td></td>
 </tr>
@@ -711,19 +704,19 @@
 </tr>
 </tbody>
 </table>
-<h5 id="sourcefield-string"><a name="sourcefield-string" class="anchor-navigation-ex-anchor" href="#sourcefield-string"><i class="fa fa-link" aria-hidden="true"></i></a>source_field [string]</h5>
-<p>&#x6E90;&#x5B57;&#x6BB5;&#x540D;</p>
-<h5 id="targetfield-string"><a name="targetfield-string" class="anchor-navigation-ex-anchor" href="#targetfield-string"><i class="fa fa-link" aria-hidden="true"></i></a>target_field [string]</h5>
-<p>&#x76EE;&#x6807;&#x5B57;&#x6BB5;&#x540D;</p>
+<h5 id="fieldandsort-array"><a name="fieldandsort-array" class="anchor-navigation-ex-anchor" href="#fieldandsort-array"><i class="fa fa-link" aria-hidden="true"></i></a>field_and_sort [array]</h5>
+<p>&#x683C;&#x5F0F;: &#x9700;&#x8981;&#x6392;&#x5E8F;&#x7684;&#x5B57;&#x6BB5;&#x540D;.&#x6392;&#x5E8F;&#x65B9;&#x5F0F;</p>
 <h5 id="common-options-string"><a name="common-options-string" class="anchor-navigation-ex-anchor" href="#common-options-string"><i class="fa fa-link" aria-hidden="true"></i></a>common options [string]</h5>
 <p><code>Transform</code> &#x7EC4;&#x4EF6;&#x901A;&#x7528;&#x53C2;&#x6570;&#xFF0C;&#x8BE6;&#x60C5;&#x53C2;&#x7167; <a href="">Transform</a></p>
 <p>&#x914D;&#x7F6E;&#x793A;&#x4F8B;</p>
 <pre><code class="lang-json">{
-    <span class="hljs-string">&quot;source_table_name&quot;</span>:<span class="hljs-string">&quot;sql_table22&quot;</span>,
-    <span class="hljs-string">&quot;result_table_name&quot;</span>:<span class="hljs-string">&quot;sql_table23&quot;</span>,
-    <span class="hljs-string">&quot;plugin_name&quot;</span>:<span class="hljs-string">&quot;DecodeBase64&quot;</span>,
-    <span class="hljs-string">&quot;source_field&quot;</span>:<span class="hljs-string">&quot;metric2&quot;</span>,
-    <span class="hljs-string">&quot;target_field&quot;</span>:<span class="hljs-string">&quot;metric&quot;</span>
+    <span class="hljs-string">&quot;source_table_name&quot;</span>: <span class="hljs-string">&quot;sql_table24&quot;</span>,
+    <span class="hljs-string">&quot;result_table_name&quot;</span>: <span class="hljs-string">&quot;sql_table25&quot;</span>,
+    <span class="hljs-string">&quot;plugin_name&quot;</span>: <span class="hljs-string">&quot;FieldOrder&quot;</span>,
+    <span class="hljs-string">&quot;field_and_sort&quot;</span>: [
+        <span class="hljs-string">&quot;value.desc&quot;</span>,
+        <span class="hljs-string">&quot;metric.desc&quot;</span>
+    ]
 }
 </code></pre>
 
@@ -753,12 +746,12 @@
 
             
                 
-                <a href="DecodeBase64.html" class="navigation navigation-prev " aria-label="Previous page: DecodeBase64">
+                <a href="FieldOperation.html" class="navigation navigation-prev " aria-label="Previous page: FieldOperation">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="FieldJavaScript.html" class="navigation navigation-next " aria-label="Next page: FieldJavaScript">
+                <a href="FieldRemove.html" class="navigation navigation-next " aria-label="Next page: FieldRemove">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -769,7 +762,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"EncodeBase64","level":"1.5.3.5","depth":3,"next":{"title":"FieldJavaScript","level":"1.5.3.6","depth":3,"path":"Component/transfrom/FieldJavaScript.md","ref":"Component/transfrom/FieldJavaScript.md","articles":[]},"previous":{"title":"DecodeBase64","level":"1.5.3.4","depth":3,"path":"Component/transfrom/DecodeBase64.md","ref":"Component/transfrom/DecodeBase64.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","anchor-navigation-ex","expandable-chapters-small","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Component/transfrom/EncodeBase64.md","mtime":"2021-08-09T13:28:59.155Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-28T13:06:18.023Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"FieldOrder","level":"1.5.3.8","depth":3,"next":{"title":"FieldRemove","level":"1.5.3.9","depth":3,"path":"Component/transform/FieldRemove.md","ref":"Component/transform/FieldRemove.md","articles":[]},"previous":{"title":"FieldOperation","level":"1.5.3.7","depth":3,"path":"Component/transform/FieldOperation.md","ref":"Component/transform/FieldOperation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","anchor-navigation-ex","expandable-chapters-small"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Component/transform/FieldOrder.md","mtime":"2021-08-09T13:53:26.057Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-25T04:09:34.594Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -785,10 +778,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>FieldJavaScript · GitBook</title>
+        <title>DataJoin · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -73,10 +73,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="FieldOperation.html" />
+    <link rel="next" href="DataSelector.html" />
     
     
-    <link rel="prev" href="EncodeBase64.html" />
+    <link rel="prev" href="DataAggregates.html" />
     
 
     </head>
@@ -343,7 +343,7 @@
                 <a href="./">
             
                     
-                    transfrom
+                    transform
             
                 </a>
             
@@ -365,7 +365,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3.2" data-path="DataJoin.html">
+        <li class="chapter active" data-level="1.5.3.2" data-path="DataJoin.html">
             
                 <a href="DataJoin.html">
             
@@ -417,7 +417,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.3.6" data-path="FieldJavaScript.html">
+        <li class="chapter " data-level="1.5.3.6" data-path="FieldJavaScript.html">
             
                 <a href="FieldJavaScript.html">
             
@@ -658,7 +658,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >FieldJavaScript</a>
+        <a href="../.." >DataJoin</a>
     </h1>
 </div>
 
@@ -673,8 +673,69 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#fieldjavascript"><b>1. </b>FieldJavaScript</a></li></ul></div><a href="#fieldjavascript" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="fieldjavascript"><a name="fieldjavascript" class="anchor-navigation-ex-anchor" href="#fieldjavascript"><i class="fa fa-link" aria-hidden="true"></i></a>1. FieldJavaScript</h1>
-<p>&#x7565;</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#datajoin"><b>1. </b>DataJoin</a></li><ul><ul><li><span class="title-icon "></span><a href="#description"><b>1.1.1. </b>Description</a></li></ul></ul></ul></div><a href="#datajoin" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="datajoin"><a name="datajoin" class="anchor-navigation-ex-anchor" href="#datajoin"><i class="fa fa-link" aria-hidden="true"></i></a>1. DataJoin</h1>
+<ul>
+<li>Author: zihjiang</li>
+<li>Version: 0.0.1</li>
+</ul>
+<h3 id="description"><a name="description" class="anchor-navigation-ex-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. Description</h3>
+<p>&#x4E24;&#x4E2A;&#x6570;&#x636E;&#x8868;&#x505A;join, &#x6700;&#x597D;&#x662F;&#x4E00;&#x5F20;&#x6D41;&#x8868;(kafka&#x6216;datagen&#x7684;source), &#x548C;&#x4E00;&#x5F20;&#x6279;&#x8868;(jdbc&#x6216;file&#x7684;source)</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>required</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>join.source_table_name</td>
+<td>Array</td>
+<td>yes</td>
+<td></td>
+</tr>
+<tr>
+<td>join.*.where</td>
+<td>string</td>
+<td>yes</td>
+<td></td>
+</tr>
+<tr>
+<td>join.*.type</td>
+<td>string</td>
+<td>yes</td>
+<td>left</td>
+</tr>
+<tr>
+<td><a href="#common-options-string">common-options</a></td>
+<td>string</td>
+<td>no</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h5 id="joinsourcetablename-array"><a name="joinsourcetablename-array" class="anchor-navigation-ex-anchor" href="#joinsourcetablename-array"><i class="fa fa-link" aria-hidden="true"></i></a>join.source_table_name [array]</h5>
+<p>&#x9700;&#x8981;&#x548C;<code>source_table_name</code>&#x505A;join&#x7684;&#x8868;, &#x53EF;&#x4EE5;&#x662F;&#x591A;&#x4E2A;</p>
+<h5 id="joinwhere-string"><a name="joinwhere-string" class="anchor-navigation-ex-anchor" href="#joinwhere-string"><i class="fa fa-link" aria-hidden="true"></i></a>join.*.where [string]</h5>
+<p>*&#x53F7;&#x548C;<code>join.source_table_name</code>&#x5BF9;&#x5E94;, &#x8FD9;&#x91CC;&#x6307;&#x4E24;&#x5F20;&#x8868;join&#x7684;&#x6761;&#x4EF6;</p>
+<h5 id="jointype-string"><a name="jointype-string" class="anchor-navigation-ex-anchor" href="#jointype-string"><i class="fa fa-link" aria-hidden="true"></i></a>join.*.type [string]</h5>
+<p>*&#x53F7;&#x548C;<code>join.source_table_name</code>&#x5BF9;&#x5E94;, &#x8FD9;&#x91CC;&#x6307;join&#x7684;&#x7C7B;&#x578B;, left&#x548C;right</p>
+<h5 id="common-options-string"><a name="common-options-string" class="anchor-navigation-ex-anchor" href="#common-options-string"><i class="fa fa-link" aria-hidden="true"></i></a>common options [string]</h5>
+<p><code>Transform</code> &#x7EC4;&#x4EF6;&#x901A;&#x7528;&#x53C2;&#x6570;&#xFF0C;&#x8BE6;&#x60C5;&#x53C2;&#x7167; <a href="">Transform</a></p>
+<p>&#x914D;&#x7F6E;&#x793A;&#x4F8B;</p>
+<pre><code class="lang-json">    {
+      <span class="hljs-string">&quot;source_table_name&quot;</span>: <span class="hljs-string">&quot;KafkaTableStreamTable&quot;</span>,
+      <span class="hljs-string">&quot;result_table_name&quot;</span>: <span class="hljs-string">&quot;KafkaTableStreamTable_default&quot;</span>,
+      <span class="hljs-string">&quot;plugin_name&quot;</span>: <span class="hljs-string">&quot;DataJoin&quot;</span>,
+      <span class="hljs-string">&quot;join.source_table_name&quot;</span>: [
+        <span class="hljs-string">&quot;JdbcSourceTable&quot;</span>
+      ],
+      <span class="hljs-string">&quot;join.JdbcSourceTable.where&quot;</span>: <span class="hljs-string">&quot;workgroup = host&quot;</span>,
+      <span class="hljs-string">&quot;join.JdbcSourceTable.type&quot;</span>: <span class="hljs-string">&quot;left&quot;</span>
+    }
+</code></pre>
 
                                 
                                 </section>
@@ -702,12 +763,12 @@
 
             
                 
-                <a href="EncodeBase64.html" class="navigation navigation-prev " aria-label="Previous page: EncodeBase64">
+                <a href="DataAggregates.html" class="navigation navigation-prev " aria-label="Previous page: DataAggregates">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="FieldOperation.html" class="navigation navigation-next " aria-label="Next page: FieldOperation">
+                <a href="DataSelector.html" class="navigation navigation-next " aria-label="Next page: DataSelector">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -718,7 +779,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"FieldJavaScript","level":"1.5.3.6","depth":3,"next":{"title":"FieldOperation","level":"1.5.3.7","depth":3,"path":"Component/transfrom/FieldOperation.md","ref":"Component/transfrom/FieldOperation.md","articles":[]},"previous":{"title":"EncodeBase64","level":"1.5.3.5","depth":3,"path":"Component/transfrom/EncodeBase64.md","ref":"Component/transfrom/EncodeBase64.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","anchor-navigation-ex","expandable-chapters-small","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Component/transfrom/FieldJavaScript.md","mtime":"2021-08-09T13:29:11.754Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-28T13:06:18.023Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"DataJoin","level":"1.5.3.2","depth":3,"next":{"title":"DataSelector","level":"1.5.3.3","depth":3,"path":"Component/transform/DataSelector.md","ref":"Component/transform/DataSelector.md","articles":[]},"previous":{"title":"DataAggregates","level":"1.5.3.1","depth":3,"path":"Component/transform/DataAggregates.md","ref":"Component/transform/DataAggregates.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","anchor-navigation-ex","expandable-chapters-small"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Component/transform/DataJoin.md","mtime":"2021-08-09T13:18:56.973Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-25T04:09:34.594Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -734,10 +795,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
