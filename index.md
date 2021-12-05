@@ -6,7 +6,9 @@ Filling, 如其名, 致力于填充你的各种存储,  是一个`非常易用`�
 
 Filling是一个基于[Flink](https://flink.apache.org/)的流式数据处理工具, Filling将每条数据以表的形式进行抽象, 后续还会支持托拉拽式编程的流处理引擎。
 
-Filling组件分为数据源(source)、算子(transfrom) 和 输出(sink)三种, 可以像拼积木一样来处理你的数据
+Filling组件分为数据源(source)、算子(transfrom) 和 输出(sink)三种, 可以像拼积木一样来处理你的数据,
+
+Filling解决普遍性问题, 而不是特例
 
 ------
 
@@ -34,10 +36,14 @@ transfrom03 --> sink-jdbc[jdbc]
 
 简述各组件的工作原理：
 
-- Filling-web：// TODO。
-
-- Filling-service：// TODO。
-
+- Filling-web：
+  
+  > 前端工程
+  
+- Filling-service:
+  
+  > 后端工程, 和前端交互, 并且向集群提交flink任务和管理/修改filling/filling-edge任务
+  
 - Filling-cluster：// TODO。
 
   > **多种集群部署方式的支持**
