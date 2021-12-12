@@ -1,13 +1,19 @@
 # Summary
 
 * [Introduction](README.md)
+
 * [什么是Filling](index.md)
+
 * [产品对比](Compared.md)
+
 * [快速入门](快速入门/README.md)
     * [基本概念](基本概念/README.md)
         * [任务](基本概念/job.md)
         * [数据类型](基本概念/datatype.md)
         * [组件](基本概念/Component.md)
+        
+    * [部署](部署/quick-install.md)
+    
 * [组件](Component/README.md)
     * [env](Component/env/README.md)
         * [配置](Component/env/config.md)
