@@ -2,6 +2,8 @@
 
 Kafka数据源（`KafkaSource`）从指定Kafka集群的一个或多个指定主题中消费数据。
 
+注: 请在生产环境下,  务必在任务参数一栏填写"execution.checkpoint.interval": 1000参数, 详情: [消费位点提交](https://nightlies.apache.org/flink/flink-docs-master/zh/docs/connectors/datastream/kafka/#%e6%b6%88%e8%b4%b9%e4%bd%8d%e7%82%b9%e6%8f%90%e4%ba%a4)
+
 ------
 
 ### [Options]()
@@ -64,15 +66,13 @@ Kafka集群地址，多个地址用`,`隔开。
 ## 配置示例
 
 ```yaml
-    {
+{
       "plugin_name": "KafkaTableStream",
       "consumer.group.id": "waterdrop15",
       "topics": "batchSend",
       "result_table_name": "KafkaTableStreamTable",
       "format.type": "json",
       "schema": "{\"host\":\"192.168.1.103\",\"source\":\"datasource\",\"MetricsName\":\"cpu\",\"value\":\"49\",\"_time\":1626571020000}",
-      "format.allow-comments": "true",
-      "format.ignore-parse-errors": "true",
       "offset.reset": "earliest",
       "consumer.bootstrap.servers": "192.168.100.189:9092",
       "parallelism": 1,
