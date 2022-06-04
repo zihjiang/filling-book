@@ -13,9 +13,10 @@
 | ---------------------------------------- | ------ | -------- | ------------- |
 | [driver](#driver-string)                 | string | yes      | -             |
 | [url](#url-string)                       | string | yes      | -             |
-| [username](#username-string)             | string | yes      | -             |
+| [username](#username-string)             | string | no       | -             |
 | [password](#password-string)             | string | no       | -             |
 | [query](#query-string)                   | string | yes      | -             |
+| Params                                   | Array  | Yes      |               |
 | [batch_size](#batch_size)                | int    | no       | 5000          |
 | batch_interval_ms                        | int    | No       | 200           |
 | max_retries                              | Int    |          | 5             |
@@ -41,7 +42,15 @@ JDBC连接的URL。如：`jdbc:mysql://localhost:3306/test`
 
 ##### query [string]
 
-查询语句
+插入数据库的sql语句, 默认为	`insert into main({columns}) values({questionMark})`,
+
+ 其中{columns}为占位符, 与参数`params`一致, 如params的字段参数为: ['id', 'host'], 则这里的{columns}为id,host,
+
+ 其中{questionMark}为占位符, 与参数`params`数量一致, 如params的字段参数为: ['id', 'host'], 则这里的{questionMark}为?,?
+
+
+
+也可以不用占位符, 使用原生插入语句`insert into main(id,host) values(?,?)`
 
 ##### batch_size [int]
 
@@ -74,3 +83,30 @@ JDBC连接的URL。如：`jdbc:mysql://localhost:3306/test`
       "name": "mytest"
     }
 ```
+
+或
+
+```json
+{
+  "name": "ClickHouse",
+  "plugin_name": "ClickHouseSink",
+  "parallelism": "1",
+  "driver": "ru.yandex.clickhouse.ClickHouseDriver",
+  "url": "jdbc:clickhouse://192.168.1.200:8123/default",
+  "username": "",
+  "password": "",
+  "query": "insert into main({columns}) values({questionMark})",
+  "params": [
+    "id",
+    "host",
+    "source",
+    "MetricsName",
+    "value",
+    "_time"
+  ],
+  "batch_size": "20000",
+  "source_table_name": "FieldOperation_ee6875e9_56f1",
+  "id": "ClickHouseSink-87cf626f-2147"
+}
+```
+

@@ -11,7 +11,7 @@
 | --- | --- | --- | --- |
 | [driver](#driver-string) | string | yes | - |
 | [url](#url-string) | string | yes | - |
-| [username](#username-string) | string | yes | - |
+| [username](#username-string) | string | no | - |
 | [password](#password-string) | string | no | - |
 | [query](#query-string) | string | yes | - |
 | [fetch_size](#fetch_size-int) | int | no | - |
@@ -58,3 +58,4 @@ JDBC连接的URL。如：`jdbc:mysql://localhost:3306/test`
       "query": "select * from t_group"
     }
 ```
+
