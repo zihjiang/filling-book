@@ -35,7 +35,7 @@
 version: '2.2'
 services:
   filling:
-    image: filling:latest
+    image: zihjiang/filling:latest
     container_name: filling
     depends_on:
       - jobmanager
@@ -59,7 +59,7 @@ services:
         FLINK_PROPERTIES=
         jobmanager.rpc.address: jobmanager
   taskmanager:
-    image: flink:1.14.3-scala_2.11
+    image: flink:1.14.3-scala_2.11-java11
     depends_on:
       - jobmanager
     command: taskmanager
