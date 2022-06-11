@@ -1,6 +1,5 @@
 # EncodeBase64
 
-# DecodeBase64
 
 * Author: zihjiang
 * Version: 0.0.1
