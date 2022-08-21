@@ -1,0 +1,969 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Jdbc Sink · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../source/" />
+    
+    
+    <link rel="prev" href="FileSink.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Component
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../env/">
+            
+                <a href="../env/">
+            
+                    
+                    Env
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../env/config.html">
+            
+                <a href="../env/config.html">
+            
+                    
+                    Config
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    Sink
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="ConsoleSink.html">
+            
+                <a href="ConsoleSink.html">
+            
+                    
+                    Console Sink
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="Elasticsearch.html">
+            
+                <a href="Elasticsearch.html">
+            
+                    
+                    Elasticsearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="FileSink.html">
+            
+                <a href="FileSink.html">
+            
+                    
+                    File Sink
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2.4" data-path="jdbcSink.html">
+            
+                <a href="jdbcSink.html">
+            
+                    
+                    Jdbc Sink
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../source/">
+            
+                <a href="../source/">
+            
+                    
+                    Source
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../source/dataGenSource.html">
+            
+                <a href="../source/dataGenSource.html">
+            
+                    
+                    Data Gen Source
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../source/fileSource.html">
+            
+                <a href="../source/fileSource.html">
+            
+                    
+                    File Source
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../source/jdbcSource.html">
+            
+                <a href="../source/jdbcSource.html">
+            
+                    
+                    Jdbc Source
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../source/kafkaSource.html">
+            
+                <a href="../source/kafkaSource.html">
+            
+                    
+                    Kafka Source
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../source/mysqlcdc.html">
+            
+                <a href="../source/mysqlcdc.html">
+            
+                    
+                    Mysqlcdc
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../transform/">
+            
+                <a href="../transform/">
+            
+                    
+                    Transform
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../transform/DataAggregates.html">
+            
+                <a href="../transform/DataAggregates.html">
+            
+                    
+                    Data Aggregates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../transform/DataJavaScript.html">
+            
+                <a href="../transform/DataJavaScript.html">
+            
+                    
+                    Data Java Script
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../transform/DataJoin.html">
+            
+                <a href="../transform/DataJoin.html">
+            
+                    
+                    Data Join
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../transform/DataParsing.html">
+            
+                <a href="../transform/DataParsing.html">
+            
+                    
+                    Data Parsing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../transform/DataSelector.html">
+            
+                <a href="../transform/DataSelector.html">
+            
+                    
+                    Data Selector
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="../transform/DecodeBase64.html">
+            
+                <a href="../transform/DecodeBase64.html">
+            
+                    
+                    Decode Base 64
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="../transform/EncodeBase64.html">
+            
+                <a href="../transform/EncodeBase64.html">
+            
+                    
+                    Encode Base 64
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.8" data-path="../transform/FieldJavaScript.html">
+            
+                <a href="../transform/FieldJavaScript.html">
+            
+                    
+                    Field Java Script
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.9" data-path="../transform/FieldJsonValue.html">
+            
+                <a href="../transform/FieldJsonValue.html">
+            
+                    
+                    Field Json Value
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.10" data-path="../transform/FieldOperation.html">
+            
+                <a href="../transform/FieldOperation.html">
+            
+                    
+                    Field Operation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.11" data-path="../transform/FieldOrder.html">
+            
+                <a href="../transform/FieldOrder.html">
+            
+                    
+                    Field Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.12" data-path="../transform/FieldRemove.html">
+            
+                <a href="../transform/FieldRemove.html">
+            
+                    
+                    Field Remove
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.13" data-path="../transform/FieldRename.html">
+            
+                <a href="../transform/FieldRename.html">
+            
+                    
+                    Field Rename
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.14" data-path="../transform/FieldSelect.html">
+            
+                <a href="../transform/FieldSelect.html">
+            
+                    
+                    Field Select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.15" data-path="../transform/FieldSplit.html">
+            
+                <a href="../transform/FieldSplit.html">
+            
+                    
+                    Field Split
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.16" data-path="../transform/FieldTypeConver.html">
+            
+                <a href="../transform/FieldTypeConver.html">
+            
+                    
+                    Field Type Conver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.17" data-path="../transform/Sql.html">
+            
+                <a href="../transform/Sql.html">
+            
+                    
+                    Sql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../基本概念/">
+            
+                <a href="../../基本概念/">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../基本概念/Component.html">
+            
+                <a href="../../基本概念/Component.html">
+            
+                    
+                    Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../基本概念/datatype.html">
+            
+                <a href="../../基本概念/datatype.html">
+            
+                    
+                    Datatype
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../基本概念/job.html">
+            
+                <a href="../../基本概念/job.html">
+            
+                    
+                    Job
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../快速入门/">
+            
+                <a href="../../快速入门/">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    部署
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../部署/quick-install.html">
+            
+                <a href="../../部署/quick-install.html">
+            
+                    
+                    Quick Install
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../Compared.html">
+            
+                <a href="../../Compared.html">
+            
+                    
+                    Compared
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Jdbc Sink</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#sink-plugin--jdbc"><b>1.1. </b>Sink plugin : JDBC</a></li><ul><li><span class="title-icon "></span><a href="#description"><b>1.1.1. </b>Description</a></li><li><span class="title-icon "></span><a href="#options"><b>1.1.2. </b>Options</a></li></ul><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;&#x793A;&#x4F8B;"><b>1.2. </b>&#x914D;&#x7F6E;&#x793A;&#x4F8B;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="sink-plugin--jdbc"><a name="sink-plugin--jdbc" class="anchor-navigation-ex-anchor" href="#sink-plugin--jdbc"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Sink plugin : JDBC</h2>
+<ul>
+<li>Author: zihjiang</li>
+<li>Version: 0.0.1</li>
+</ul>
+<h3 id="description"><a name="description" class="anchor-navigation-ex-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. Description</h3>
+<p>&#x901A;&#x8FC7;jdbc&#x7684;&#x65B9;&#x5F0F;sink&#x5230;&#x6570;&#x636E;&#x5E93;</p>
+<h3 id="options"><a name="options" class="anchor-navigation-ex-anchor" href="#options"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. Options</h3>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>required</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#driver-string">driver</a></td>
+<td>string</td>
+<td>yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="#url-string">url</a></td>
+<td>string</td>
+<td>yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="#username-string">username</a></td>
+<td>string</td>
+<td>no</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="#password-string">password</a></td>
+<td>string</td>
+<td>no</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="#query-string">query</a></td>
+<td>string</td>
+<td>yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Params</td>
+<td>Array</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#batch_size">batch_size</a></td>
+<td>int</td>
+<td>no</td>
+<td>5000</td>
+</tr>
+<tr>
+<td>batch_interval_ms</td>
+<td>int</td>
+<td>No</td>
+<td>200</td>
+</tr>
+<tr>
+<td>max_retries</td>
+<td>Int</td>
+<td></td>
+<td>5</td>
+</tr>
+<tr>
+<td><a href="#common-options-string">common-options</a></td>
+<td>string</td>
+<td>no</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h5 id="driver-string"><a name="driver-string" class="anchor-navigation-ex-anchor" href="#driver-string"><i class="fa fa-link" aria-hidden="true"></i></a>driver [string]</h5>
+<p>&#x9A71;&#x52A8;&#x540D;&#xFF0C;&#x5982;<code>com.mysql.jdbc.Driver</code></p>
+<p>&#x9ED8;&#x8BA4;&#x652F;&#x6301;&#x5305;&#x542B;mysql(com.mysql.jdbc.Driver)&#x548C;clickhouse(ru.yandex.clickhouse.ClickHouseDriver)&#x9A71;&#x52A8;</p>
+<h5 id="url-string"><a name="url-string" class="anchor-navigation-ex-anchor" href="#url-string"><i class="fa fa-link" aria-hidden="true"></i></a>url [string]</h5>
+<p>JDBC&#x8FDE;&#x63A5;&#x7684;URL&#x3002;&#x5982;&#xFF1A;<code>jdbc:mysql://localhost:3306/test</code></p>
+<h5 id="username-string"><a name="username-string" class="anchor-navigation-ex-anchor" href="#username-string"><i class="fa fa-link" aria-hidden="true"></i></a>username [string]</h5>
+<p>&#x7528;&#x6237;&#x540D;</p>
+<h5 id="password-string"><a name="password-string" class="anchor-navigation-ex-anchor" href="#password-string"><i class="fa fa-link" aria-hidden="true"></i></a>password [string]</h5>
+<p>&#x5BC6;&#x7801;</p>
+<h5 id="query-string"><a name="query-string" class="anchor-navigation-ex-anchor" href="#query-string"><i class="fa fa-link" aria-hidden="true"></i></a>query [string]</h5>
+<p>&#x63D2;&#x5165;&#x6570;&#x636E;&#x5E93;&#x7684;sql&#x8BED;&#x53E5;, &#x9ED8;&#x8BA4;&#x4E3A;    <code>insert into main({columns}) values({questionMark})</code>,</p>
+<p> &#x5176;&#x4E2D;{columns}&#x4E3A;&#x5360;&#x4F4D;&#x7B26;, &#x4E0E;&#x53C2;&#x6570;<code>params</code>&#x4E00;&#x81F4;, &#x5982;params&#x7684;&#x5B57;&#x6BB5;&#x53C2;&#x6570;&#x4E3A;: [&apos;id&apos;, &apos;host&apos;], &#x5219;&#x8FD9;&#x91CC;&#x7684;{columns}&#x4E3A;id,host,</p>
+<p> &#x5176;&#x4E2D;{questionMark}&#x4E3A;&#x5360;&#x4F4D;&#x7B26;, &#x4E0E;&#x53C2;&#x6570;<code>params</code>&#x6570;&#x91CF;&#x4E00;&#x81F4;, &#x5982;params&#x7684;&#x5B57;&#x6BB5;&#x53C2;&#x6570;&#x4E3A;: [&apos;id&apos;, &apos;host&apos;], &#x5219;&#x8FD9;&#x91CC;&#x7684;{questionMark}&#x4E3A;?,?</p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x5360;&#x4F4D;&#x7B26;, &#x4F7F;&#x7528;&#x539F;&#x751F;&#x63D2;&#x5165;&#x8BED;&#x53E5;<code>insert into main(id,host) values(?,?)</code></p>
+<h5 id="batchsize-int"><a name="batchsize-int" class="anchor-navigation-ex-anchor" href="#batchsize-int"><i class="fa fa-link" aria-hidden="true"></i></a>batch_size [int]</h5>
+<p>&#x6BCF;&#x4E2A;&#x6279;&#x6B21;&#x591A;&#x5C11;&#x6570;&#x636E;</p>
+<h5 id="batchintervalms--int"><a name="batchintervalms--int" class="anchor-navigation-ex-anchor" href="#batchintervalms--int"><i class="fa fa-link" aria-hidden="true"></i></a>batch_interval_ms  [int]</h5>
+<p>&#x591A;&#x4E45;&#x63D0;&#x4EA4;&#x4E00;&#x4E2A;&#x6279;&#x6B21;</p>
+<h5 id="maxretries--int"><a name="maxretries--int" class="anchor-navigation-ex-anchor" href="#maxretries--int"><i class="fa fa-link" aria-hidden="true"></i></a>max_retries  [int]</h5>
+<p>&#x91CD;&#x8BD5;&#x6700;&#x5927;&#x6B21;&#x6570;</p>
+<h5 id="common-options-string"><a name="common-options-string" class="anchor-navigation-ex-anchor" href="#common-options-string"><i class="fa fa-link" aria-hidden="true"></i></a>common options [string]</h5>
+<p><code>Source</code> &#x63D2;&#x4EF6;&#x901A;&#x7528;&#x53C2;&#x6570;&#xFF0C;&#x8BE6;&#x60C5;&#x53C2;&#x7167; <a href="../../zh-cn/v2/flink/configuration/source-plugins">Source Plugin</a></p>
+<h2 id="&#x914D;&#x7F6E;&#x793A;&#x4F8B;"><a name="&#x914D;&#x7F6E;&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x914D;&#x7F6E;&#x793A;&#x4F8B;</h2>
+<pre><code class="lang-yaml">    {
+<span class="hljs-attr">      &quot;source_table_name&quot;:</span> <span class="hljs-string">&quot;JdbcSourceTable&quot;</span>,
+<span class="hljs-attr">      &quot;plugin_name&quot;:</span> <span class="hljs-string">&quot;ClickHouseSink&quot;</span>,
+<span class="hljs-attr">      &quot;driver&quot;:</span> <span class="hljs-string">&quot;ru.yandex.clickhouse.ClickHouseDriver&quot;</span>,
+<span class="hljs-attr">      &quot;url&quot;:</span> <span class="hljs-string">&quot;jdbc:clickhouse://192.168.100.15:8123/aiops&quot;</span>,
+<span class="hljs-attr">      &quot;query&quot;:</span> <span class="hljs-string">&quot;insert into host_metric10(host, metric, value, system, instance, _time) values(?,?,?,?,?,?)&quot;</span>,
+<span class="hljs-attr">      &quot;batch_size&quot;:</span> <span class="hljs-string">&quot;2000&quot;</span>,
+<span class="hljs-attr">      &quot;params&quot;:</span> [<span class="hljs-string">&quot;host&quot;</span>, <span class="hljs-string">&quot;metric&quot;</span>, <span class="hljs-string">&quot;value&quot;</span>, <span class="hljs-string">&quot;system&quot;</span>, <span class="hljs-string">&quot;instance&quot;</span>, <span class="hljs-string">&quot;_time&quot;</span>],
+<span class="hljs-attr">      &quot;parallelism&quot;:</span> <span class="hljs-number">5</span>,
+<span class="hljs-attr">      &quot;name&quot;:</span> <span class="hljs-string">&quot;mytest&quot;</span>
+    }
+</code></pre>
+<p>&#x6216;</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;ClickHouse&quot;</span>,
+  <span class="hljs-string">&quot;plugin_name&quot;</span>: <span class="hljs-string">&quot;ClickHouseSink&quot;</span>,
+  <span class="hljs-string">&quot;parallelism&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>,
+  <span class="hljs-string">&quot;driver&quot;</span>: <span class="hljs-string">&quot;ru.yandex.clickhouse.ClickHouseDriver&quot;</span>,
+  <span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;jdbc:clickhouse://192.168.1.200:8123/default&quot;</span>,
+  <span class="hljs-string">&quot;username&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-string">&quot;password&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-string">&quot;query&quot;</span>: <span class="hljs-string">&quot;insert into main({columns}) values({questionMark})&quot;</span>,
+  <span class="hljs-string">&quot;params&quot;</span>: [
+    <span class="hljs-string">&quot;id&quot;</span>,
+    <span class="hljs-string">&quot;host&quot;</span>,
+    <span class="hljs-string">&quot;source&quot;</span>,
+    <span class="hljs-string">&quot;MetricsName&quot;</span>,
+    <span class="hljs-string">&quot;value&quot;</span>,
+    <span class="hljs-string">&quot;_time&quot;</span>
+  ],
+  <span class="hljs-string">&quot;batch_size&quot;</span>: <span class="hljs-string">&quot;20000&quot;</span>,
+  <span class="hljs-string">&quot;source_table_name&quot;</span>: <span class="hljs-string">&quot;FieldOperation_ee6875e9_56f1&quot;</span>,
+  <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;ClickHouseSink-87cf626f-2147&quot;</span>
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="FileSink.html" class="navigation navigation-prev " aria-label="Previous page: File Sink">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../source/" class="navigation navigation-next " aria-label="Next page: Source">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Jdbc Sink","level":"1.2.2.4","depth":3,"next":{"title":"Source","level":"1.2.3","depth":2,"path":"Component/source/README.md","ref":"Component/source/README.md","articles":[{"title":"Data Gen Source","level":"1.2.3.1","depth":3,"path":"Component/source/dataGenSource.md","ref":"Component/source/dataGenSource.md","articles":[]},{"title":"File Source","level":"1.2.3.2","depth":3,"path":"Component/source/fileSource.md","ref":"Component/source/fileSource.md","articles":[]},{"title":"Jdbc Source","level":"1.2.3.3","depth":3,"path":"Component/source/jdbcSource.md","ref":"Component/source/jdbcSource.md","articles":[]},{"title":"Kafka Source","level":"1.2.3.4","depth":3,"path":"Component/source/kafkaSource.md","ref":"Component/source/kafkaSource.md","articles":[]},{"title":"Mysqlcdc","level":"1.2.3.5","depth":3,"path":"Component/source/mysqlcdc.md","ref":"Component/source/mysqlcdc.md","articles":[]}]},"previous":{"title":"File Sink","level":"1.2.2.3","depth":3,"path":"Component/sink/FileSink.md","ref":"Component/sink/FileSink.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","anchor-navigation-ex","expandable-chapters-small"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Component/sink/jdbcSink.md","mtime":"2022-08-21T14:31:46.795Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-21T14:32:37.215Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
